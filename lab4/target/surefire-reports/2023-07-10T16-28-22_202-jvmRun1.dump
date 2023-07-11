@@ -1,0 +1,1128 @@
+# Created at 2023-07-10T16:28:55.700
+Thread dump for process (19936@HPSpectre):
+"main" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/sun.nio.ch.Net.poll(Native Method)
+        at java.base@20.0.1/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:186)
+        at java.base@20.0.1/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:275)
+        at java.base@20.0.1/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:299)
+        at java.base@20.0.1/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:340)
+        at java.base@20.0.1/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:789)
+        at java.base@20.0.1/java.net.Socket$SocketInputStream.read(Socket.java:1025)
+        at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:161)
+        at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82)
+        at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:276)
+        at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+        at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+        at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+        at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:294)
+        at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257)
+        at org.apache.http.impl.conn.ManagedClientConnectionImpl.receiveResponseHeader(ManagedClientConnectionImpl.java:207)
+        at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+        at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+        at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679)
+        at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481)
+        at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+        at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+        at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+        at org.apache.http.client.HttpClient$execute$0.call(Unknown Source)
+        at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+        at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+        at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
+        at io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder.doRequest(RequestSpecificationImpl.groovy:2088)
+        at io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:497)
+        at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:454)
+        at io.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)
+        at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+        at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+        at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+        at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1465)
+        at java.base@20.0.1/java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial(DirectMethodHandle$Holder)
+        at java.base@20.0.1/java.lang.invoke.LambdaForm$MH/0x0000000801957000.invoke(LambdaForm$MH)
+        at java.base@20.0.1/java.lang.invoke.Invokers$Holder.invokeExact_MT(Invokers$Holder)
+        at java.base@20.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invokeImpl(DirectMethodHandleAccessor.java:158)
+        at java.base@20.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+        at java.base@20.0.1/java.lang.reflect.Method.invoke(Method.java:578)
+        at app//org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+        at app//groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+        at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+        at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+        at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)
+        at app//groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+        at app//org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+        at app//org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
+        at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+        at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+        at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1214)
+        at java.base@20.0.1/java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial(DirectMethodHandle$Holder)
+        at java.base@20.0.1/java.lang.invoke.LambdaForm$MH/0x00000008018cb400.invoke(LambdaForm$MH)
+        at java.base@20.0.1/java.lang.invoke.Invokers$Holder.invokeExact_MT(Invokers$Holder)
+        at java.base@20.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invokeImpl(DirectMethodHandleAccessor.java:158)
+        at java.base@20.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+        at java.base@20.0.1/java.lang.reflect.Method.invoke(Method.java:578)
+        at app//org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+        at app//groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+        at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+        at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+        at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)
+        at app//groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+        at app//org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+        at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+        at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+        at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+        at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+        at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+        at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+        at io.restassured.filter.Filter$filter.call(Unknown Source)
+        at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+        at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+        at io.restassured.filter.Filter$filter.call(Unknown Source)
+        at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+        at io.restassured.filter.Filter$filter.call(Unknown Source)
+        at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+        at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:146)
+        at io.restassured.filter.Filter$filter.call(Unknown Source)
+        at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+        at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+        at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:157)
+        at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+        at io.restassured.filter.FilterContext$next.call(Unknown Source)
+        at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+        at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+        at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
+        at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1686)
+        at java.base@20.0.1/java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial(DirectMethodHandle$Holder)
+        at java.base@20.0.1/java.lang.invoke.LambdaForm$MH/0x0000000801885000.invoke(LambdaForm$MH)
+        at java.base@20.0.1/java.lang.invoke.LambdaForm$MH/0x00000008010a4400.invokeExact_MT(LambdaForm$MH)
+        at java.base@20.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invokeImpl(DirectMethodHandleAccessor.java:157)
+        at java.base@20.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+        at java.base@20.0.1/java.lang.reflect.Method.invoke(Method.java:578)
+        at app//org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+        at app//groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+        at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+        at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+        at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)
+
+"Reference Handler" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+        at java.base@20.0.1/java.lang.ref.Reference.processPendingReferences(Reference.java:246)
+        at java.base@20.0.1/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:208)
+
+"Finalizer" 
+   java.lang.Thread.State: WAITING
+        at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+        at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+        at java.base@20.0.1/java.lang.Object.wait(Object.java:339)
+        at java.base@20.0.1/java.lang.ref.NativeReferenceQueue.await(NativeReferenceQueue.java:48)
+        at java.base@20.0.1/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:158)
+        at java.base@20.0.1/java.lang.ref.NativeReferenceQueue.remove(NativeReferenceQueue.java:89)
+        at java.base@20.0.1/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:173)
+
+"Signal Dispatcher" 
+   java.lang.Thread.State: RUNNABLE
+
+"Attach Listener" 
+   java.lang.Thread.State: RUNNABLE
+
+"Notification Thread" 
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+        at java.base@20.0.1/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+        at java.base@20.0.1/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+        at java.base@20.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+        at java.base@20.0.1/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at java.base@20.0.1/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:186)
+
+"surefire-forkedjvm-stream-flusher" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+        at java.base@20.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@20.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"surefire-forkedjvm-command-thread" 
+   java.lang.Thread.State: RUNNABLE
+        at java.management@20.0.1/sun.management.ThreadImpl.getThreadInfo1(Native Method)
+        at java.management@20.0.1/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:191)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.generateThreadDump(ForkedBooter.java:579)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.access$600(ForkedBooter.java:79)
+        at app//org.apache.maven.surefire.booter.ForkedBooter$4.update(ForkedBooter.java:322)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.callListeners(CommandReader.java:357)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:309)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"ForkJoinPool.commonPool-worker-1" 
+   java.lang.Thread.State: WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"Quarkus hang detection timer thread" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+        at java.base@20.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@20.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"ForkJoinPool.commonPool-worker-2" 
+   java.lang.Thread.State: WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"ForkJoinPool.commonPool-worker-3" 
+   java.lang.Thread.State: WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"ForkJoinPool.commonPool-worker-4" 
+   java.lang.Thread.State: WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"ForkJoinPool.commonPool-worker-5" 
+   java.lang.Thread.State: WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"ForkJoinPool.commonPool-worker-6" 
+   java.lang.Thread.State: WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"ForkJoinPool.commonPool-worker-7" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkUntil(LockSupport.java:449)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1891)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"executor-thread-0" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/java.lang.Thread.sleep0(Native Method)
+        at java.base@20.0.1/java.lang.Thread.sleep(Thread.java:484)
+        at de.berlin.htw.control.FibonacciController.calculateNext(FibonacciController.java:31)
+        at de.berlin.htw.boundary.FibonacciResource.getFibonacciSequence(FibonacciResource.java:38)
+        at java.base@20.0.1/java.lang.invoke.LambdaForm$DMH/0x0000000801030000.invokeVirtual(LambdaForm$DMH)
+        at java.base@20.0.1/java.lang.invoke.LambdaForm$MH/0x0000000801280400.invoke(LambdaForm$MH)
+        at java.base@20.0.1/java.lang.invoke.Invokers$Holder.invokeExact_MT(Invokers$Holder)
+        at java.base@20.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invokeImpl(DirectMethodHandleAccessor.java:155)
+        at java.base@20.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+        at java.base@20.0.1/java.lang.reflect.Method.invoke(Method.java:578)
+        at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:170)
+        at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:130)
+        at org.jboss.resteasy.core.ResourceMethodInvoker.internalInvokeOnTarget(ResourceMethodInvoker.java:660)
+        at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTargetAfterFilter(ResourceMethodInvoker.java:524)
+        at org.jboss.resteasy.core.ResourceMethodInvoker.lambda$invokeOnTarget$2(ResourceMethodInvoker.java:474)
+        at org.jboss.resteasy.core.ResourceMethodInvoker$$Lambda$2072/0x00000008019bfd38.get(Unknown Source)
+        at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:364)
+        at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTarget(ResourceMethodInvoker.java:476)
+        at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:434)
+        at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:408)
+        at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:69)
+        at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:492)
+        at org.jboss.resteasy.core.SynchronousDispatcher.lambda$invoke$4(SynchronousDispatcher.java:261)
+        at org.jboss.resteasy.core.SynchronousDispatcher$$Lambda$2070/0x00000008019bdd38.run(Unknown Source)
+        at org.jboss.resteasy.core.SynchronousDispatcher.lambda$preprocess$0(SynchronousDispatcher.java:161)
+        at org.jboss.resteasy.core.SynchronousDispatcher$$Lambda$2071/0x00000008019be540.get(Unknown Source)
+        at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:364)
+        at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+        at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+        at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:82)
+        at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:147)
+        at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:93)
+        at io.quarkus.vertx.core.runtime.VertxCoreRecorder$14.runWith(VertxCoreRecorder.java:576)
+        at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+        at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+        at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"vertx-blocked-thread-checker" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+        at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+        at java.base@20.0.1/java.util.TimerThread.mainLoop(Timer.java:563)
+        at java.base@20.0.1/java.util.TimerThread.run(Timer.java:516)
+
+"pool-9-thread-1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+        at java.base@20.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@20.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"smallrye-kafka-consumer-thread-0" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@20.0.1/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:142)
+        at org.apache.kafka.common.network.Selector.select(Selector.java:873)
+        at org.apache.kafka.common.network.Selector.poll(Selector.java:465)
+        at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:560)
+        at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:280)
+        at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:251)
+        at org.apache.kafka.clients.consumer.KafkaConsumer.pollForFetches(KafkaConsumer.java:1311)
+        at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1247)
+        at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1220)
+        at io.smallrye.reactive.messaging.kafka.impl.ReactiveKafkaConsumer.lambda$poll$4(ReactiveKafkaConsumer.java:156)
+        at io.smallrye.reactive.messaging.kafka.impl.ReactiveKafkaConsumer$$Lambda$1568/0x00000008016c9830.apply(Unknown Source)
+        at io.smallrye.context.impl.wrappers.SlowContextualFunction.apply(SlowContextualFunction.java:21)
+        at io.smallrye.mutiny.operators.uni.UniOnItemTransform$UniOnItemTransformProcessor.onItem(UniOnItemTransform.java:36)
+        at io.smallrye.mutiny.operators.uni.UniOperatorProcessor.onItem(UniOperatorProcessor.java:47)
+        at io.smallrye.mutiny.operators.uni.UniMemoizeOp.subscribe(UniMemoizeOp.java:73)
+        at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:36)
+        at io.smallrye.mutiny.operators.uni.UniRunSubscribeOn.lambda$subscribe$0(UniRunSubscribeOn.java:27)
+        at io.smallrye.mutiny.operators.uni.UniRunSubscribeOn$$Lambda$1435/0x000000080164ca18.run(Unknown Source)
+        at java.base@20.0.1/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+        at java.base@20.0.1/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+        at java.base@20.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"smallrye-kafka-consumer-thread-1" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@20.0.1/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:142)
+        at org.apache.kafka.common.network.Selector.select(Selector.java:873)
+        at org.apache.kafka.common.network.Selector.poll(Selector.java:465)
+        at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:560)
+        at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:280)
+        at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:251)
+        at org.apache.kafka.clients.consumer.KafkaConsumer.pollForFetches(KafkaConsumer.java:1311)
+        at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1247)
+        at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1220)
+        at io.smallrye.reactive.messaging.kafka.impl.ReactiveKafkaConsumer.lambda$poll$4(ReactiveKafkaConsumer.java:156)
+        at io.smallrye.reactive.messaging.kafka.impl.ReactiveKafkaConsumer$$Lambda$1568/0x00000008016c9830.apply(Unknown Source)
+        at io.smallrye.context.impl.wrappers.SlowContextualFunction.apply(SlowContextualFunction.java:21)
+        at io.smallrye.mutiny.operators.uni.UniOnItemTransform$UniOnItemTransformProcessor.onItem(UniOnItemTransform.java:36)
+        at io.smallrye.mutiny.operators.uni.UniOperatorProcessor.onItem(UniOperatorProcessor.java:47)
+        at io.smallrye.mutiny.operators.uni.UniMemoizeOp.subscribe(UniMemoizeOp.java:73)
+        at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:36)
+        at io.smallrye.mutiny.operators.uni.UniRunSubscribeOn.lambda$subscribe$0(UniRunSubscribeOn.java:27)
+        at io.smallrye.mutiny.operators.uni.UniRunSubscribeOn$$Lambda$1435/0x000000080164ca18.run(Unknown Source)
+        at java.base@20.0.1/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+        at java.base@20.0.1/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+        at java.base@20.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"smallrye-kafka-producer-thread-0" 
+   java.lang.Thread.State: WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+        at java.base@20.0.1/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"kafka-producer-network-thread | kafka-producer-twitter-producer" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@20.0.1/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:142)
+        at org.apache.kafka.common.network.Selector.select(Selector.java:873)
+        at org.apache.kafka.common.network.Selector.poll(Selector.java:465)
+        at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:560)
+        at org.apache.kafka.clients.producer.internals.Sender.runOnce(Sender.java:328)
+        at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:243)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"smallrye-kafka-producer-thread-1" 
+   java.lang.Thread.State: WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+        at java.base@20.0.1/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"kafka-producer-network-thread | kafka-producer-fibonacci-producer" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@20.0.1/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:142)
+        at org.apache.kafka.common.network.Selector.select(Selector.java:873)
+        at org.apache.kafka.common.network.Selector.poll(Selector.java:465)
+        at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:560)
+        at org.apache.kafka.clients.producer.internals.Sender.runOnce(Sender.java:328)
+        at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:243)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"vert.x-eventloop-thread-0" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@20.0.1/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+        at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+        at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+        at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"vert.x-eventloop-thread-1" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@20.0.1/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:142)
+        at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+        at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:883)
+        at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+        at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"vert.x-acceptor-thread-0" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@20.0.1/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+        at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+        at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+        at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"vert.x-eventloop-thread-2" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@20.0.1/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+        at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+        at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+        at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"kafka-coordinator-heartbeat-thread | verteilte-anwendungen-kafka" 
+   java.lang.Thread.State: WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:221)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:754)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:990)
+        at java.base@20.0.1/java.util.concurrent.locks.ReentrantLock$Sync.lock(ReentrantLock.java:153)
+        at java.base@20.0.1/java.util.concurrent.locks.ReentrantLock.lock(ReentrantLock.java:322)
+        at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:264)
+        at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.pollNoWakeup(ConsumerNetworkClient.java:321)
+        at org.apache.kafka.clients.consumer.internals.AbstractCoordinator$HeartbeatThread.run(AbstractCoordinator.java:1451)
+
+"kafka-coordinator-heartbeat-thread | verteilte-anwendungen-kafka" 
+   java.lang.Thread.State: WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:221)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:754)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:990)
+        at java.base@20.0.1/java.util.concurrent.locks.ReentrantLock$Sync.lock(ReentrantLock.java:153)
+        at java.base@20.0.1/java.util.concurrent.locks.ReentrantLock.lock(ReentrantLock.java:322)
+        at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:264)
+        at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.pollNoWakeup(ConsumerNetworkClient.java:321)
+        at org.apache.kafka.clients.consumer.internals.AbstractCoordinator$HeartbeatThread.run(AbstractCoordinator.java:1451)
+
+"vert.x-eventloop-thread-3" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@20.0.1/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:142)
+        at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+        at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:883)
+        at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+        at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"vert.x-eventloop-thread-4" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@20.0.1/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+        at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+        at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+        at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"executor-thread-1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+        at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"vert.x-eventloop-thread-5" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@20.0.1/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:142)
+        at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+        at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:883)
+        at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+        at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+
+
+# Created at 2023-07-10T16:28:55.708
+Exiting self fork JVM. Received SHUTDOWN command from Maven shutdown hook.
+Thread dump before exiting the process (19936@HPSpectre):
+"main" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/sun.nio.ch.Net.poll(Native Method)
+        at java.base@20.0.1/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:186)
+        at java.base@20.0.1/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:275)
+        at java.base@20.0.1/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:299)
+        at java.base@20.0.1/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:340)
+        at java.base@20.0.1/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:789)
+        at java.base@20.0.1/java.net.Socket$SocketInputStream.read(Socket.java:1025)
+        at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:161)
+        at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82)
+        at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:276)
+        at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+        at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+        at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+        at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:294)
+        at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257)
+        at org.apache.http.impl.conn.ManagedClientConnectionImpl.receiveResponseHeader(ManagedClientConnectionImpl.java:207)
+        at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+        at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+        at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679)
+        at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481)
+        at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+        at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+        at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+        at org.apache.http.client.HttpClient$execute$0.call(Unknown Source)
+        at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+        at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+        at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
+        at io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder.doRequest(RequestSpecificationImpl.groovy:2088)
+        at io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:497)
+        at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:454)
+        at io.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)
+        at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+        at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+        at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+        at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1465)
+        at java.base@20.0.1/java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial(DirectMethodHandle$Holder)
+        at java.base@20.0.1/java.lang.invoke.LambdaForm$MH/0x0000000801957000.invoke(LambdaForm$MH)
+        at java.base@20.0.1/java.lang.invoke.Invokers$Holder.invokeExact_MT(Invokers$Holder)
+        at java.base@20.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invokeImpl(DirectMethodHandleAccessor.java:158)
+        at java.base@20.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+        at java.base@20.0.1/java.lang.reflect.Method.invoke(Method.java:578)
+        at app//org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+        at app//groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+        at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+        at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+        at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)
+        at app//groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+        at app//org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+        at app//org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
+        at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+        at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+        at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1214)
+        at java.base@20.0.1/java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial(DirectMethodHandle$Holder)
+        at java.base@20.0.1/java.lang.invoke.LambdaForm$MH/0x00000008018cb400.invoke(LambdaForm$MH)
+        at java.base@20.0.1/java.lang.invoke.Invokers$Holder.invokeExact_MT(Invokers$Holder)
+        at java.base@20.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invokeImpl(DirectMethodHandleAccessor.java:158)
+        at java.base@20.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+        at java.base@20.0.1/java.lang.reflect.Method.invoke(Method.java:578)
+        at app//org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+        at app//groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+        at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+        at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+        at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)
+        at app//groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+        at app//org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+        at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+        at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+        at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+        at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+        at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+        at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+        at io.restassured.filter.Filter$filter.call(Unknown Source)
+        at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+        at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+        at io.restassured.filter.Filter$filter.call(Unknown Source)
+        at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+        at io.restassured.filter.Filter$filter.call(Unknown Source)
+        at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+        at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:146)
+        at io.restassured.filter.Filter$filter.call(Unknown Source)
+        at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+        at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+        at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:157)
+        at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+        at io.restassured.filter.FilterContext$next.call(Unknown Source)
+        at app//org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+        at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+        at app//org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
+        at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1686)
+        at java.base@20.0.1/java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial(DirectMethodHandle$Holder)
+        at java.base@20.0.1/java.lang.invoke.LambdaForm$MH/0x0000000801885000.invoke(LambdaForm$MH)
+        at java.base@20.0.1/java.lang.invoke.LambdaForm$MH/0x00000008010a4400.invokeExact_MT(LambdaForm$MH)
+        at java.base@20.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invokeImpl(DirectMethodHandleAccessor.java:157)
+        at java.base@20.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+        at java.base@20.0.1/java.lang.reflect.Method.invoke(Method.java:578)
+        at app//org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+        at app//groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+        at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+        at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+        at app//groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)
+
+"Reference Handler" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+        at java.base@20.0.1/java.lang.ref.Reference.processPendingReferences(Reference.java:246)
+        at java.base@20.0.1/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:208)
+
+"Finalizer" 
+   java.lang.Thread.State: WAITING
+        at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+        at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+        at java.base@20.0.1/java.lang.Object.wait(Object.java:339)
+        at java.base@20.0.1/java.lang.ref.NativeReferenceQueue.await(NativeReferenceQueue.java:48)
+        at java.base@20.0.1/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:158)
+        at java.base@20.0.1/java.lang.ref.NativeReferenceQueue.remove(NativeReferenceQueue.java:89)
+        at java.base@20.0.1/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:173)
+
+"Signal Dispatcher" 
+   java.lang.Thread.State: RUNNABLE
+
+"Attach Listener" 
+   java.lang.Thread.State: RUNNABLE
+
+"Notification Thread" 
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+        at java.base@20.0.1/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+        at java.base@20.0.1/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+        at java.base@20.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+        at java.base@20.0.1/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at java.base@20.0.1/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:186)
+
+"surefire-forkedjvm-stream-flusher" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+        at java.base@20.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@20.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"surefire-forkedjvm-command-thread" 
+   java.lang.Thread.State: RUNNABLE
+        at java.management@20.0.1/sun.management.ThreadImpl.getThreadInfo1(Native Method)
+        at java.management@20.0.1/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:191)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.generateThreadDump(ForkedBooter.java:579)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.access$600(ForkedBooter.java:79)
+        at app//org.apache.maven.surefire.booter.ForkedBooter$4.update(ForkedBooter.java:315)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.callListeners(CommandReader.java:357)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.exitByConfiguration(CommandReader.java:367)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:330)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"ForkJoinPool.commonPool-worker-1" 
+   java.lang.Thread.State: WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"Quarkus hang detection timer thread" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+        at java.base@20.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@20.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"ForkJoinPool.commonPool-worker-2" 
+   java.lang.Thread.State: WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"ForkJoinPool.commonPool-worker-3" 
+   java.lang.Thread.State: WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"ForkJoinPool.commonPool-worker-4" 
+   java.lang.Thread.State: WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"ForkJoinPool.commonPool-worker-5" 
+   java.lang.Thread.State: WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"ForkJoinPool.commonPool-worker-6" 
+   java.lang.Thread.State: WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"ForkJoinPool.commonPool-worker-7" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkUntil(LockSupport.java:449)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1891)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"executor-thread-0" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/java.lang.Thread.sleep0(Native Method)
+        at java.base@20.0.1/java.lang.Thread.sleep(Thread.java:484)
+        at de.berlin.htw.control.FibonacciController.calculateNext(FibonacciController.java:31)
+        at de.berlin.htw.boundary.FibonacciResource.getFibonacciSequence(FibonacciResource.java:38)
+        at java.base@20.0.1/java.lang.invoke.LambdaForm$DMH/0x0000000801030000.invokeVirtual(LambdaForm$DMH)
+        at java.base@20.0.1/java.lang.invoke.LambdaForm$MH/0x0000000801280400.invoke(LambdaForm$MH)
+        at java.base@20.0.1/java.lang.invoke.Invokers$Holder.invokeExact_MT(Invokers$Holder)
+        at java.base@20.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invokeImpl(DirectMethodHandleAccessor.java:155)
+        at java.base@20.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+        at java.base@20.0.1/java.lang.reflect.Method.invoke(Method.java:578)
+        at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:170)
+        at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:130)
+        at org.jboss.resteasy.core.ResourceMethodInvoker.internalInvokeOnTarget(ResourceMethodInvoker.java:660)
+        at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTargetAfterFilter(ResourceMethodInvoker.java:524)
+        at org.jboss.resteasy.core.ResourceMethodInvoker.lambda$invokeOnTarget$2(ResourceMethodInvoker.java:474)
+        at org.jboss.resteasy.core.ResourceMethodInvoker$$Lambda$2072/0x00000008019bfd38.get(Unknown Source)
+        at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:364)
+        at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTarget(ResourceMethodInvoker.java:476)
+        at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:434)
+        at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:408)
+        at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:69)
+        at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:492)
+        at org.jboss.resteasy.core.SynchronousDispatcher.lambda$invoke$4(SynchronousDispatcher.java:261)
+        at org.jboss.resteasy.core.SynchronousDispatcher$$Lambda$2070/0x00000008019bdd38.run(Unknown Source)
+        at org.jboss.resteasy.core.SynchronousDispatcher.lambda$preprocess$0(SynchronousDispatcher.java:161)
+        at org.jboss.resteasy.core.SynchronousDispatcher$$Lambda$2071/0x00000008019be540.get(Unknown Source)
+        at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:364)
+        at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+        at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+        at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:82)
+        at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:147)
+        at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:93)
+        at io.quarkus.vertx.core.runtime.VertxCoreRecorder$14.runWith(VertxCoreRecorder.java:576)
+        at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+        at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+        at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"vertx-blocked-thread-checker" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+        at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+        at java.base@20.0.1/java.util.TimerThread.mainLoop(Timer.java:563)
+        at java.base@20.0.1/java.util.TimerThread.run(Timer.java:516)
+
+"pool-9-thread-1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+        at java.base@20.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@20.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"smallrye-kafka-consumer-thread-0" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@20.0.1/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:142)
+        at org.apache.kafka.common.network.Selector.select(Selector.java:873)
+        at org.apache.kafka.common.network.Selector.poll(Selector.java:465)
+        at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:560)
+        at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:280)
+        at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:251)
+        at org.apache.kafka.clients.consumer.KafkaConsumer.pollForFetches(KafkaConsumer.java:1311)
+        at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1247)
+        at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1220)
+        at io.smallrye.reactive.messaging.kafka.impl.ReactiveKafkaConsumer.lambda$poll$4(ReactiveKafkaConsumer.java:156)
+        at io.smallrye.reactive.messaging.kafka.impl.ReactiveKafkaConsumer$$Lambda$1568/0x00000008016c9830.apply(Unknown Source)
+        at io.smallrye.context.impl.wrappers.SlowContextualFunction.apply(SlowContextualFunction.java:21)
+        at io.smallrye.mutiny.operators.uni.UniOnItemTransform$UniOnItemTransformProcessor.onItem(UniOnItemTransform.java:36)
+        at io.smallrye.mutiny.operators.uni.UniOperatorProcessor.onItem(UniOperatorProcessor.java:47)
+        at io.smallrye.mutiny.operators.uni.UniMemoizeOp.subscribe(UniMemoizeOp.java:73)
+        at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:36)
+        at io.smallrye.mutiny.operators.uni.UniRunSubscribeOn.lambda$subscribe$0(UniRunSubscribeOn.java:27)
+        at io.smallrye.mutiny.operators.uni.UniRunSubscribeOn$$Lambda$1435/0x000000080164ca18.run(Unknown Source)
+        at java.base@20.0.1/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+        at java.base@20.0.1/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+        at java.base@20.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"smallrye-kafka-consumer-thread-1" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@20.0.1/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:142)
+        at org.apache.kafka.common.network.Selector.select(Selector.java:873)
+        at org.apache.kafka.common.network.Selector.poll(Selector.java:465)
+        at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:560)
+        at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:280)
+        at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:251)
+        at org.apache.kafka.clients.consumer.KafkaConsumer.pollForFetches(KafkaConsumer.java:1311)
+        at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1247)
+        at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1220)
+        at io.smallrye.reactive.messaging.kafka.impl.ReactiveKafkaConsumer.lambda$poll$4(ReactiveKafkaConsumer.java:156)
+        at io.smallrye.reactive.messaging.kafka.impl.ReactiveKafkaConsumer$$Lambda$1568/0x00000008016c9830.apply(Unknown Source)
+        at io.smallrye.context.impl.wrappers.SlowContextualFunction.apply(SlowContextualFunction.java:21)
+        at io.smallrye.mutiny.operators.uni.UniOnItemTransform$UniOnItemTransformProcessor.onItem(UniOnItemTransform.java:36)
+        at io.smallrye.mutiny.operators.uni.UniOperatorProcessor.onItem(UniOperatorProcessor.java:47)
+        at io.smallrye.mutiny.operators.uni.UniMemoizeOp.subscribe(UniMemoizeOp.java:73)
+        at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:36)
+        at io.smallrye.mutiny.operators.uni.UniRunSubscribeOn.lambda$subscribe$0(UniRunSubscribeOn.java:27)
+        at io.smallrye.mutiny.operators.uni.UniRunSubscribeOn$$Lambda$1435/0x000000080164ca18.run(Unknown Source)
+        at java.base@20.0.1/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+        at java.base@20.0.1/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+        at java.base@20.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"smallrye-kafka-producer-thread-0" 
+   java.lang.Thread.State: WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+        at java.base@20.0.1/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"kafka-producer-network-thread | kafka-producer-twitter-producer" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@20.0.1/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:142)
+        at org.apache.kafka.common.network.Selector.select(Selector.java:873)
+        at org.apache.kafka.common.network.Selector.poll(Selector.java:465)
+        at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:560)
+        at org.apache.kafka.clients.producer.internals.Sender.runOnce(Sender.java:328)
+        at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:243)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"smallrye-kafka-producer-thread-1" 
+   java.lang.Thread.State: WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+        at java.base@20.0.1/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"kafka-producer-network-thread | kafka-producer-fibonacci-producer" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@20.0.1/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:142)
+        at org.apache.kafka.common.network.Selector.select(Selector.java:873)
+        at org.apache.kafka.common.network.Selector.poll(Selector.java:465)
+        at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:560)
+        at org.apache.kafka.clients.producer.internals.Sender.runOnce(Sender.java:328)
+        at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:243)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"vert.x-eventloop-thread-0" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@20.0.1/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+        at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+        at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+        at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"vert.x-eventloop-thread-1" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@20.0.1/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:142)
+        at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+        at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:883)
+        at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+        at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"vert.x-acceptor-thread-0" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@20.0.1/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+        at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+        at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+        at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"vert.x-eventloop-thread-2" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@20.0.1/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+        at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+        at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+        at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"kafka-coordinator-heartbeat-thread | verteilte-anwendungen-kafka" 
+   java.lang.Thread.State: WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:221)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:754)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:990)
+        at java.base@20.0.1/java.util.concurrent.locks.ReentrantLock$Sync.lock(ReentrantLock.java:153)
+        at java.base@20.0.1/java.util.concurrent.locks.ReentrantLock.lock(ReentrantLock.java:322)
+        at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:264)
+        at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.pollNoWakeup(ConsumerNetworkClient.java:321)
+        at org.apache.kafka.clients.consumer.internals.AbstractCoordinator$HeartbeatThread.run(AbstractCoordinator.java:1451)
+
+"kafka-coordinator-heartbeat-thread | verteilte-anwendungen-kafka" 
+   java.lang.Thread.State: WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:221)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:754)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:990)
+        at java.base@20.0.1/java.util.concurrent.locks.ReentrantLock$Sync.lock(ReentrantLock.java:153)
+        at java.base@20.0.1/java.util.concurrent.locks.ReentrantLock.lock(ReentrantLock.java:322)
+        at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:264)
+        at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.pollNoWakeup(ConsumerNetworkClient.java:321)
+        at org.apache.kafka.clients.consumer.internals.AbstractCoordinator$HeartbeatThread.run(AbstractCoordinator.java:1451)
+
+"vert.x-eventloop-thread-3" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@20.0.1/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:142)
+        at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+        at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:883)
+        at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+        at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"vert.x-eventloop-thread-4" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@20.0.1/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+        at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+        at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+        at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"executor-thread-1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+        at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"vert.x-eventloop-thread-5" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@20.0.1/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@20.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:142)
+        at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+        at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:883)
+        at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+        at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+
+

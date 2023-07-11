@@ -1,0 +1,13 @@
+de\berlin\htw\boundary\FibonacciProducer.class
+de\berlin\htw\boundary\FibonacciResource.class
+de\berlin\htw\boundary\TwitterResource.class
+de\berlin\htw\boundary\TwitterConsumer.class
+de\berlin\htw\boundary\TwitterProducer.class
+de\berlin\htw\control\TweetController.class
+de\berlin\htw\control\FibonacciController.class
+de\berlin\htw\boundary\dto\FibonacciTuple.class
+de\berlin\htw\boundary\FibonacciConsumer.class
+de\berlin\htw\boundary\dto\Tweet.class
+de\berlin\htw\control\producer\LoggerProducer.class
+de\berlin\htw\control\TweetGenerator.class
+de\berlin\htw\control\FibonacciGenerator.class
