@@ -1,0 +1,20 @@
+version: '3'
+services:
+  nginx:
+    build:
+      dockerfile: dockerfile
+      context: ./nginx
+    ports:
+      - '8181:80'
+  quarkus:
+    build:
+      dockerfile: dockerfile
+      context: ./quarkus
+    ports:
+      - '8182:8080'
+  wildfly:
+    build:
+      dockerfile: dockerfile
+      context: ./wildfly
+    ports:
+      - '8183:8080'

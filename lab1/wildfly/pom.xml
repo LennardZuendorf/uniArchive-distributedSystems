@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<project
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>wildfly</artifactId>
+    <packaging>war</packaging>
+    <name>Aufgabe 3 - Wildfly Deployment</name>
+
+    <parent>
+        <groupId>de.berlin.htw</groupId>
+        <artifactId>verteilte-anwendungen-docker</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <properties>
+        <wildfly.version>27.0.1.Final</wildfly.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.wildfly.bom</groupId>
+                <artifactId>wildfly-ee-with-tools</artifactId>
+                <version>${wildfly.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>jakarta.enterprise</groupId>
+            <artifactId>jakarta.enterprise.cdi-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.ws.rs</groupId>
+            <artifactId>jakarta.ws.rs-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.logging</groupId>
+            <artifactId>jboss-logging</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.wildfly</groupId>
+            <artifactId>wildfly-dist</artifactId>
+            <version>${wildfly.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>verteilte-anwendung</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
+            </plugin>
+            <plugin>
+                <!-- download and unpack wildfly distribution -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.5.0</version>
+                <executions>
+                    <execution>
+                        <id>wildfly</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>org.wildfly</groupId>
+                                    <artifactId>wildfly-dist</artifactId>
+                                    <version>${wildfly.version}</version>
+                                    <type>tar.gz</type>
+                                    <overWrite>true</overWrite>
+                                    <outputDirectory>${project.build.directory}</outputDirectory>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
