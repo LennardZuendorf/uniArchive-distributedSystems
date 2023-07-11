@@ -1,0 +1,11 @@
+de\berlin\htw\entity\dao\UserRepository.class
+de\berlin\htw\entity\dto\ProjectEntity.class
+de\berlin\htw\boundary\AlreadyExistsException.class
+de\berlin\htw\control\ProjectController.class
+de\berlin\htw\control\UserController.class
+de\berlin\htw\boundary\ProjectResource.class
+de\berlin\htw\entity\dao\ProjectRepository.class
+de\berlin\htw\entity\dto\UserEntity.class
+de\berlin\htw\entity\dto\AbstractEntity.class
+de\berlin\htw\control\producer\LoggerProducer.class
+de\berlin\htw\boundary\UserResource.class

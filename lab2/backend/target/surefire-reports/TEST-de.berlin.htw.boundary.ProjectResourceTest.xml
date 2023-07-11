@@ -1,0 +1,949 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="de.berlin.htw.boundary.ProjectResourceTest" time="22.683" tests="8" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.specification.version" value="20"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="test.url" value="http://localhost:8081"/>
+    <property name="java.class.path" value="C:\Users\lenna\Programming\verteilte-anwendungen-lab2\backend\target\test-classes;C:\Users\lenna\Programming\verteilte-anwendungen-lab2\backend\target\classes;C:\Users\lenna\Programming\verteilte-anwendungen-lab2\library\target\library-1.0.0-SNAPSHOT.jar;C:\Users\lenna\.m2\repository\org\eclipse\microprofile\openapi\microprofile-openapi-api\2.0.1\microprofile-openapi-api-2.0.1.jar;C:\Users\lenna\Programming\verteilte-anwendungen-lab2\frontend\target\frontend-webapp.jar;C:\Users\lenna\.m2\repository\javax\ws\rs\javax.ws.rs-api\2.1\javax.ws.rs-api-2.1.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-resteasy\2.16.6.Final\quarkus-resteasy-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-vertx-http\2.16.6.Final\quarkus-vertx-http-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-security-runtime-spi\2.16.6.Final\quarkus-security-runtime-spi-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-credentials\2.16.6.Final\quarkus-credentials-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-mutiny\2.16.6.Final\quarkus-mutiny-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-smallrye-context-propagation\2.16.6.Final\quarkus-smallrye-context-propagation-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\smallrye\smallrye-context-propagation\1.2.2\smallrye-context-propagation-1.2.2.jar;C:\Users\lenna\.m2\repository\io\smallrye\smallrye-context-propagation-api\1.2.2\smallrye-context-propagation-api-1.2.2.jar;C:\Users\lenna\.m2\repository\io\smallrye\smallrye-context-propagation-storage\1.2.2\smallrye-context-propagation-storage-1.2.2.jar;C:\Users\lenna\.m2\repository\io\smallrye\reactive\mutiny-smallrye-context-propagation\1.9.0\mutiny-smallrye-context-propagation-1.9.0.jar;C:\Users\lenna\.m2\repository\io\smallrye\common\smallrye-common-vertx-context\1.13.2\smallrye-common-vertx-context-1.13.2.jar;C:\Users\lenna\.m2\repository\io\vertx\vertx-core\4.3.7\vertx-core-4.3.7.jar;C:\Users\lenna\.m2\repository\io\netty\netty-common\4.1.86.Final\netty-common-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\io\netty\netty-buffer\4.1.86.Final\netty-buffer-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\io\netty\netty-transport\4.1.86.Final\netty-transport-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\io\netty\netty-handler\4.1.86.Final\netty-handler-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.86.Final\netty-transport-native-unix-common-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\io\netty\netty-handler-proxy\4.1.86.Final\netty-handler-proxy-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\io\netty\netty-codec-socks\4.1.86.Final\netty-codec-socks-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\io\netty\netty-codec-http\4.1.86.Final\netty-codec-http-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\io\netty\netty-codec-http2\4.1.86.Final\netty-codec-http2-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\io\netty\netty-resolver\4.1.86.Final\netty-resolver-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\io\netty\netty-resolver-dns\4.1.86.Final\netty-resolver-dns-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\io\netty\netty-codec-dns\4.1.86.Final\netty-codec-dns-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.14.2\jackson-core-2.14.2.jar;C:\Users\lenna\.m2\repository\io\smallrye\common\smallrye-common-constraint\1.13.2\smallrye-common-constraint-1.13.2.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-vertx-http-dev-console-runtime-spi\2.16.6.Final\quarkus-vertx-http-dev-console-runtime-spi-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\security\quarkus-security\1.1.4.Final\quarkus-security-1.1.4.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-vertx\2.16.6.Final\quarkus-vertx-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-netty\2.16.6.Final\quarkus-netty-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\netty\netty-codec\4.1.86.Final\netty-codec-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\com\aayushatharva\brotli4j\brotli4j\1.8.0\brotli4j-1.8.0.jar;C:\Users\lenna\.m2\repository\com\aayushatharva\brotli4j\native-windows-x86_64\1.8.0\native-windows-x86_64-1.8.0.jar;C:\Users\lenna\.m2\repository\io\netty\netty-codec-haproxy\4.1.86.Final\netty-codec-haproxy-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\io\smallrye\common\smallrye-common-annotation\1.13.2\smallrye-common-annotation-1.13.2.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-vertx-latebound-mdc-provider\2.16.6.Final\quarkus-vertx-latebound-mdc-provider-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\smallrye\reactive\smallrye-mutiny-vertx-core\2.30.1\smallrye-mutiny-vertx-core-2.30.1.jar;C:\Users\lenna\.m2\repository\io\smallrye\reactive\smallrye-mutiny-vertx-runtime\2.30.1\smallrye-mutiny-vertx-runtime-2.30.1.jar;C:\Users\lenna\.m2\repository\io\smallrye\reactive\vertx-mutiny-generator\2.30.1\vertx-mutiny-generator-2.30.1.jar;C:\Users\lenna\.m2\repository\io\vertx\vertx-codegen\4.3.7\vertx-codegen-4.3.7.jar;C:\Users\lenna\.m2\repository\io\smallrye\smallrye-fault-tolerance-vertx\5.6.0\smallrye-fault-tolerance-vertx-5.6.0.jar;C:\Users\lenna\.m2\repository\io\smallrye\reactive\smallrye-mutiny-vertx-web\2.30.1\smallrye-mutiny-vertx-web-2.30.1.jar;C:\Users\lenna\.m2\repository\io\smallrye\reactive\smallrye-mutiny-vertx-web-common\2.30.1\smallrye-mutiny-vertx-web-common-2.30.1.jar;C:\Users\lenna\.m2\repository\io\smallrye\reactive\smallrye-mutiny-vertx-auth-common\2.30.1\smallrye-mutiny-vertx-auth-common-2.30.1.jar;C:\Users\lenna\.m2\repository\io\smallrye\reactive\smallrye-mutiny-vertx-bridge-common\2.30.1\smallrye-mutiny-vertx-bridge-common-2.30.1.jar;C:\Users\lenna\.m2\repository\io\smallrye\reactive\smallrye-mutiny-vertx-uri-template\2.30.1\smallrye-mutiny-vertx-uri-template-2.30.1.jar;C:\Users\lenna\.m2\repository\io\vertx\vertx-uri-template\4.3.7\vertx-uri-template-4.3.7.jar;C:\Users\lenna\.m2\repository\io\vertx\vertx-web\4.3.7\vertx-web-4.3.7.jar;C:\Users\lenna\.m2\repository\io\vertx\vertx-web-common\4.3.7\vertx-web-common-4.3.7.jar;C:\Users\lenna\.m2\repository\io\vertx\vertx-auth-common\4.3.7\vertx-auth-common-4.3.7.jar;C:\Users\lenna\.m2\repository\io\vertx\vertx-bridge-common\4.3.7\vertx-bridge-common-4.3.7.jar;C:\Users\lenna\.m2\repository\io\github\crac\org-crac\0.1.3\org-crac-0.1.3.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-resteasy-server-common\2.16.6.Final\quarkus-resteasy-server-common-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-resteasy-common\2.16.6.Final\quarkus-resteasy-common-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\org\jboss\resteasy\resteasy-core\4.7.7.Final\resteasy-core-4.7.7.Final.jar;C:\Users\lenna\.m2\repository\org\jboss\resteasy\resteasy-core-spi\4.7.7.Final\resteasy-core-spi-4.7.7.Final.jar;C:\Users\lenna\.m2\repository\com\ibm\async\asyncutil\0.1.0\asyncutil-0.1.0.jar;C:\Users\lenna\.m2\repository\jakarta\validation\jakarta.validation-api\2.0.2\jakarta.validation-api-2.0.2.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-resteasy-jsonb\2.16.6.Final\quarkus-resteasy-jsonb-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-jsonb\2.16.6.Final\quarkus-jsonb-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\org\eclipse\yasson\1.0.11\yasson-1.0.11.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-jsonp\2.16.6.Final\quarkus-jsonp-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\org\glassfish\jakarta.json\1.1.6\jakarta.json-1.1.6.jar;C:\Users\lenna\.m2\repository\org\jboss\resteasy\resteasy-json-binding-provider\4.7.7.Final\resteasy-json-binding-provider-4.7.7.Final.jar;C:\Users\lenna\.m2\repository\jakarta\json\bind\jakarta.json.bind-api\1.0.2\jakarta.json.bind-api-1.0.2.jar;C:\Users\lenna\.m2\repository\org\jboss\logging\jboss-logging\3.5.0.Final\jboss-logging-3.5.0.Final.jar;C:\Users\lenna\.m2\repository\org\jboss\resteasy\resteasy-json-p-provider\4.7.7.Final\resteasy-json-p-provider-4.7.7.Final.jar;C:\Users\lenna\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-hibernate-orm\2.16.6.Final\quarkus-hibernate-orm-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-core\2.16.6.Final\quarkus-core-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\lenna\.m2\repository\jakarta\enterprise\jakarta.enterprise.cdi-api\2.0.2\jakarta.enterprise.cdi-api-2.0.2.jar;C:\Users\lenna\.m2\repository\jakarta\el\jakarta.el-api\3.0.3\jakarta.el-api-3.0.3.jar;C:\Users\lenna\.m2\repository\jakarta\interceptor\jakarta.interceptor-api\1.2.5\jakarta.interceptor-api-1.2.5.jar;C:\Users\lenna\.m2\repository\jakarta\inject\jakarta.inject-api\1.0\jakarta.inject-api-1.0.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-ide-launcher\2.16.6.Final\quarkus-ide-launcher-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-development-mode-spi\2.16.6.Final\quarkus-development-mode-spi-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\smallrye\config\smallrye-config\2.13.3\smallrye-config-2.13.3.jar;C:\Users\lenna\.m2\repository\io\smallrye\config\smallrye-config-core\2.13.3\smallrye-config-core-2.13.3.jar;C:\Users\lenna\.m2\repository\org\eclipse\microprofile\config\microprofile-config-api\2.0.1\microprofile-config-api-2.0.1.jar;C:\Users\lenna\.m2\repository\io\smallrye\common\smallrye-common-expression\1.13.2\smallrye-common-expression-1.13.2.jar;C:\Users\lenna\.m2\repository\io\smallrye\common\smallrye-common-function\1.13.2\smallrye-common-function-1.13.2.jar;C:\Users\lenna\.m2\repository\io\smallrye\common\smallrye-common-classloader\1.13.2\smallrye-common-classloader-1.13.2.jar;C:\Users\lenna\.m2\repository\io\smallrye\config\smallrye-config-common\2.13.3\smallrye-config-common-2.13.3.jar;C:\Users\lenna\.m2\repository\org\jboss\logmanager\jboss-logmanager-embedded\1.0.11\jboss-logmanager-embedded-1.0.11.jar;C:\Users\lenna\.m2\repository\org\jboss\logging\jboss-logging-annotations\2.2.1.Final\jboss-logging-annotations-2.2.1.Final.jar;C:\Users\lenna\.m2\repository\org\jboss\threads\jboss-threads\3.4.3.Final\jboss-threads-3.4.3.Final.jar;C:\Users\lenna\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\lenna\.m2\repository\org\jboss\slf4j\slf4j-jboss-logmanager\1.2.0.Final\slf4j-jboss-logmanager-1.2.0.Final.jar;C:\Users\lenna\.m2\repository\org\graalvm\sdk\graal-sdk\22.3.0\graal-sdk-22.3.0.jar;C:\Users\lenna\.m2\repository\org\wildfly\common\wildfly-common\1.5.4.Final-format-001\wildfly-common-1.5.4.Final-format-001.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-bootstrap-runner\2.16.6.Final\quarkus-bootstrap-runner-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-fs-util\0.0.9\quarkus-fs-util-0.0.9.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-agroal\2.16.6.Final\quarkus-agroal-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-datasource\2.16.6.Final\quarkus-datasource-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\agroal\agroal-api\1.17\agroal-api-1.17.jar;C:\Users\lenna\.m2\repository\io\agroal\agroal-narayana\1.17\agroal-narayana-1.17.jar;C:\Users\lenna\.m2\repository\org\jboss\jboss-transaction-spi\7.6.0.Final\jboss-transaction-spi-7.6.0.Final.jar;C:\Users\lenna\.m2\repository\io\agroal\agroal-pool\1.17\agroal-pool-1.17.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-narayana-jta\2.16.6.Final\quarkus-narayana-jta-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-transaction-annotations\2.16.6.Final\quarkus-transaction-annotations-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\smallrye\smallrye-context-propagation-jta\1.2.2\smallrye-context-propagation-jta-1.2.2.jar;C:\Users\lenna\.m2\repository\io\smallrye\reactive\smallrye-reactive-converter-api\2.7.0\smallrye-reactive-converter-api-2.7.0.jar;C:\Users\lenna\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\lenna\.m2\repository\io\smallrye\reactive\smallrye-reactive-converter-mutiny\2.7.0\smallrye-reactive-converter-mutiny-2.7.0.jar;C:\Users\lenna\.m2\repository\org\jboss\narayana\jta\narayana-jta\5.13.1.Final\narayana-jta-5.13.1.Final.jar;C:\Users\lenna\.m2\repository\org\jboss\spec\javax\resource\jboss-connector-api_1.7_spec\1.0.0.Final\jboss-connector-api_1.7_spec-1.0.0.Final.jar;C:\Users\lenna\.m2\repository\org\jboss\narayana\jts\narayana-jts-integration\5.13.1.Final\narayana-jts-integration-5.13.1.Final.jar;C:\Users\lenna\.m2\repository\org\hibernate\hibernate-core\5.6.15.Final\hibernate-core-5.6.15.Final.jar;C:\Users\lenna\.m2\repository\net\bytebuddy\byte-buddy\1.12.18\byte-buddy-1.12.18.jar;C:\Users\lenna\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\lenna\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\lenna\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\lenna\.m2\repository\org\hibernate\hibernate-graalvm\5.6.15.Final\hibernate-graalvm-5.6.15.Final.jar;C:\Users\lenna\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.3-b02\jaxb-runtime-2.3.3-b02.jar;C:\Users\lenna\.m2\repository\org\glassfish\jaxb\txw2\2.3.3-b02\txw2-2.3.3-b02.jar;C:\Users\lenna\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.10\istack-commons-runtime-3.0.10.jar;C:\Users\lenna\.m2\repository\com\sun\activation\jakarta.activation\1.2.1\jakarta.activation-1.2.1.jar;C:\Users\lenna\.m2\repository\org\jboss\spec\javax\xml\bind\jboss-jaxb-api_2.3_spec\2.0.0.Final\jboss-jaxb-api_2.3_spec-2.0.0.Final.jar;C:\Users\lenna\.m2\repository\jakarta\persistence\jakarta.persistence-api\2.2.3\jakarta.persistence-api-2.2.3.jar;C:\Users\lenna\.m2\repository\jakarta\transaction\jakarta.transaction-api\1.3.3\jakarta.transaction-api-1.3.3.jar;C:\Users\lenna\.m2\repository\org\hibernate\quarkus-local-cache\0.1.1\quarkus-local-cache-0.1.1.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-caffeine\2.16.6.Final\quarkus-caffeine-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\com\github\ben-manes\caffeine\caffeine\3.1.1\caffeine-3.1.1.jar;C:\Users\lenna\.m2\repository\com\google\errorprone\error_prone_annotations\2.17.0\error_prone_annotations-2.17.0.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-hibernate-validator\2.16.6.Final\quarkus-hibernate-validator-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\org\hibernate\validator\hibernate-validator\6.2.5.Final\hibernate-validator-6.2.5.Final.jar;C:\Users\lenna\.m2\repository\org\glassfish\jakarta.el\3.0.4\jakarta.el-3.0.4.jar;C:\Users\lenna\.m2\repository\io\smallrye\config\smallrye-config-validator\2.13.3\smallrye-config-validator-2.13.3.jar;C:\Users\lenna\.m2\repository\org\jboss\spec\javax\ws\rs\jboss-jaxrs-api_2.1_spec\2.0.1.Final\jboss-jaxrs-api_2.1_spec-2.0.1.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-jdbc-mysql\2.16.6.Final\quarkus-jdbc-mysql-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\mysql\mysql-connector-java\8.0.30\mysql-connector-java-8.0.30.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-liquibase\2.16.6.Final\quarkus-liquibase-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\org\liquibase\liquibase-core\4.18.0\liquibase-core-4.18.0.jar;C:\Users\lenna\.m2\repository\com\opencsv\opencsv\5.7.1\opencsv-5.7.1.jar;C:\Users\lenna\.m2\repository\org\apache\commons\commons-text\1.10.0\commons-text-1.10.0.jar;C:\Users\lenna\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\lenna\.m2\repository\org\osgi\osgi.core\6.0.0\osgi.core-6.0.0.jar;C:\Users\lenna\.m2\repository\org\yaml\snakeyaml\1.33\snakeyaml-1.33.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-jaxb\2.16.6.Final\quarkus-jaxb-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-jaxp\2.16.6.Final\quarkus-jaxp-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-datasource-common\2.16.6.Final\quarkus-datasource-common-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-arc\2.16.6.Final\quarkus-arc-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\arc\arc\2.16.6.Final\arc-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\smallrye\reactive\mutiny\1.9.0\mutiny-1.9.0.jar;C:\Users\lenna\.m2\repository\org\eclipse\microprofile\context-propagation\microprofile-context-propagation-api\1.2\microprofile-context-propagation-api-1.2.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-junit5\2.16.6.Final\quarkus-junit5-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-bootstrap-core\2.16.6.Final\quarkus-bootstrap-core-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-bootstrap-app-model\2.16.6.Final\quarkus-bootstrap-app-model-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\smallrye\common\smallrye-common-io\1.13.2\smallrye-common-io-1.13.2.jar;C:\Users\lenna\.m2\repository\org\eclipse\sisu\org.eclipse.sisu.inject\0.3.5\org.eclipse.sisu.inject-0.3.5.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-test-common\2.16.6.Final\quarkus-test-common-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-core-deployment\2.16.6.Final\quarkus-core-deployment-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\org\aesh\readline\2.2\readline-2.2.jar;C:\Users\lenna\.m2\repository\org\fusesource\jansi\jansi\1.18\jansi-1.18.jar;C:\Users\lenna\.m2\repository\org\aesh\aesh\2.7\aesh-2.7.jar;C:\Users\lenna\.m2\repository\io\quarkus\gizmo\gizmo\1.6.0.Final\gizmo-1.6.0.Final.jar;C:\Users\lenna\.m2\repository\org\ow2\asm\asm-util\9.4\asm-util-9.4.jar;C:\Users\lenna\.m2\repository\org\ow2\asm\asm-analysis\9.4\asm-analysis-9.4.jar;C:\Users\lenna\.m2\repository\org\ow2\asm\asm\9.4\asm-9.4.jar;C:\Users\lenna\.m2\repository\org\ow2\asm\asm-commons\9.4\asm-commons-9.4.jar;C:\Users\lenna\.m2\repository\org\ow2\asm\asm-tree\9.4\asm-tree-9.4.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-class-change-agent\2.16.6.Final\quarkus-class-change-agent-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-devtools-utilities\2.16.6.Final\quarkus-devtools-utilities-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-builder\2.16.6.Final\quarkus-builder-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\org\junit\platform\junit-platform-launcher\1.9.2\junit-platform-launcher-1.9.2.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-bootstrap-maven-resolver\2.16.6.Final\quarkus-bootstrap-maven-resolver-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\org\apache\maven\maven-embedder\3.8.6\maven-embedder-3.8.6.jar;C:\Users\lenna\.m2\repository\org\apache\maven\maven-settings\3.8.6\maven-settings-3.8.6.jar;C:\Users\lenna\.m2\repository\org\apache\maven\maven-core\3.8.6\maven-core-3.8.6.jar;C:\Users\lenna\.m2\repository\org\apache\maven\maven-artifact\3.8.6\maven-artifact-3.8.6.jar;C:\Users\lenna\.m2\repository\org\codehaus\plexus\plexus-component-annotations\2.1.0\plexus-component-annotations-2.1.0.jar;C:\Users\lenna\.m2\repository\org\apache\maven\maven-plugin-api\3.8.6\maven-plugin-api-3.8.6.jar;C:\Users\lenna\.m2\repository\org\apache\maven\maven-model\3.8.6\maven-model-3.8.6.jar;C:\Users\lenna\.m2\repository\org\apache\maven\maven-model-builder\3.8.6\maven-model-builder-3.8.6.jar;C:\Users\lenna\.m2\repository\org\apache\maven\maven-builder-support\3.8.6\maven-builder-support-3.8.6.jar;C:\Users\lenna\.m2\repository\org\apache\maven\resolver\maven-resolver-api\1.6.3\maven-resolver-api-1.6.3.jar;C:\Users\lenna\.m2\repository\org\apache\maven\resolver\maven-resolver-util\1.6.3\maven-resolver-util-1.6.3.jar;C:\Users\lenna\.m2\repository\org\apache\maven\shared\maven-shared-utils\3.3.4\maven-shared-utils-3.3.4.jar;C:\Users\lenna\.m2\repository\com\google\inject\guice\4.2.2\guice-4.2.2-no_aop.jar;C:\Users\lenna\.m2\repository\com\google\guava\guava\31.1-jre\guava-31.1-jre.jar;C:\Users\lenna\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\lenna\.m2\repository\org\codehaus\plexus\plexus-classworlds\2.6.0\plexus-classworlds-2.6.0.jar;C:\Users\lenna\.m2\repository\org\codehaus\plexus\plexus-sec-dispatcher\2.0\plexus-sec-dispatcher-2.0.jar;C:\Users\lenna\.m2\repository\org\codehaus\plexus\plexus-cipher\2.0\plexus-cipher-2.0.jar;C:\Users\lenna\.m2\repository\commons-cli\commons-cli\1.4\commons-cli-1.4.jar;C:\Users\lenna\.m2\repository\org\eclipse\sisu\org.eclipse.sisu.plexus\0.3.5\org.eclipse.sisu.plexus-0.3.5.jar;C:\Users\lenna\.m2\repository\org\apache\maven\maven-settings-builder\3.8.6\maven-settings-builder-3.8.6.jar;C:\Users\lenna\.m2\repository\org\codehaus\plexus\plexus-interpolation\1.26\plexus-interpolation-1.26.jar;C:\Users\lenna\.m2\repository\org\apache\maven\maven-resolver-provider\3.8.6\maven-resolver-provider-3.8.6.jar;C:\Users\lenna\.m2\repository\org\apache\maven\maven-repository-metadata\3.8.6\maven-repository-metadata-3.8.6.jar;C:\Users\lenna\.m2\repository\org\apache\maven\resolver\maven-resolver-spi\1.6.3\maven-resolver-spi-1.6.3.jar;C:\Users\lenna\.m2\repository\org\apache\maven\resolver\maven-resolver-impl\1.6.3\maven-resolver-impl-1.6.3.jar;C:\Users\lenna\.m2\repository\org\codehaus\plexus\plexus-utils\3.3.0\plexus-utils-3.3.0.jar;C:\Users\lenna\.m2\repository\org\apache\maven\resolver\maven-resolver-connector-basic\1.6.3\maven-resolver-connector-basic-1.6.3.jar;C:\Users\lenna\.m2\repository\org\apache\maven\resolver\maven-resolver-transport-wagon\1.6.3\maven-resolver-transport-wagon-1.6.3.jar;C:\Users\lenna\.m2\repository\org\apache\maven\wagon\wagon-http\3.5.1\wagon-http-3.5.1.jar;C:\Users\lenna\.m2\repository\org\apache\maven\wagon\wagon-http-shared\3.5.1\wagon-http-shared-3.5.1.jar;C:\Users\lenna\.m2\repository\org\apache\maven\wagon\wagon-provider-api\3.5.1\wagon-provider-api-3.5.1.jar;C:\Users\lenna\.m2\repository\org\apache\maven\wagon\wagon-file\3.5.1\wagon-file-3.5.1.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-bootstrap-gradle-resolver\2.16.6.Final\quarkus-bootstrap-gradle-resolver-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\smallrye\jandex\3.0.5\jandex-3.0.5.jar;C:\Users\lenna\.m2\repository\org\jboss\logging\commons-logging-jboss-logging\1.0.0.Final\commons-logging-jboss-logging-1.0.0.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-junit5-properties\2.16.6.Final\quarkus-junit5-properties-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\org\junit\jupiter\junit-jupiter\5.9.2\junit-jupiter-5.9.2.jar;C:\Users\lenna\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.2\junit-jupiter-api-5.9.2.jar;C:\Users\lenna\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\lenna\.m2\repository\org\junit\platform\junit-platform-commons\1.9.2\junit-platform-commons-1.9.2.jar;C:\Users\lenna\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\lenna\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.2\junit-jupiter-params-5.9.2.jar;C:\Users\lenna\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.2\junit-jupiter-engine-5.9.2.jar;C:\Users\lenna\.m2\repository\org\junit\platform\junit-platform-engine\1.9.2\junit-platform-engine-1.9.2.jar;C:\Users\lenna\.m2\repository\com\thoughtworks\xstream\xstream\1.4.20\xstream-1.4.20.jar;C:\Users\lenna\.m2\repository\io\github\x-stream\mxparser\1.2.2\mxparser-1.2.2.jar;C:\Users\lenna\.m2\repository\xmlpull\xmlpull\1.1.3.1\xmlpull-1.1.3.1.jar;C:\Users\lenna\.m2\repository\io\rest-assured\rest-assured\4.5.1\rest-assured-4.5.1.jar;C:\Users\lenna\.m2\repository\org\codehaus\groovy\groovy\3.0.9\groovy-3.0.9.jar;C:\Users\lenna\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.9\groovy-xml-3.0.9.jar;C:\Users\lenna\.m2\repository\org\apache\httpcomponents\httpclient\4.5.14\httpclient-4.5.14.jar;C:\Users\lenna\.m2\repository\org\apache\httpcomponents\httpcore\4.4.16\httpcore-4.4.16.jar;C:\Users\lenna\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\lenna\.m2\repository\org\apache\httpcomponents\httpmime\4.5.14\httpmime-4.5.14.jar;C:\Users\lenna\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\lenna\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\lenna\.m2\repository\io\rest-assured\json-path\4.5.1\json-path-4.5.1.jar;C:\Users\lenna\.m2\repository\org\codehaus\groovy\groovy-json\3.0.9\groovy-json-3.0.9.jar;C:\Users\lenna\.m2\repository\io\rest-assured\rest-assured-common\4.5.1\rest-assured-common-4.5.1.jar;C:\Users\lenna\.m2\repository\io\rest-assured\xml-path\4.5.1\xml-path-4.5.1.jar;C:\Users\lenna\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Berlin"/>
+    <property name="user.country.format" value="DE"/>
+    <property name="logging.initial-configurator.min-level" value="500"/>
+    <property name="java.vm.specification.version" value="20"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Users\lenna\.jdks\openjdk-20.0.1\bin"/>
+    <property name="sun.java.command" value="C:\Users\lenna\AppData\Local\Temp\surefire1501378236320730000\surefirebooter-20230608134020912_3.jar C:\Users\lenna\AppData\Local\Temp\surefire1501378236320730000 2023-06-08T13-40-20_672-jvmRun1 surefire-20230608134020912_1tmp surefire_0-20230608134020912_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="maven.home" value="C:\Users\lenna\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\231.8770.65\plugins\maven\lib\maven3"/>
+    <property name="surefire.test.class.path" value="C:\Users\lenna\Programming\verteilte-anwendungen-lab2\backend\target\test-classes;C:\Users\lenna\Programming\verteilte-anwendungen-lab2\backend\target\classes;C:\Users\lenna\Programming\verteilte-anwendungen-lab2\library\target\library-1.0.0-SNAPSHOT.jar;C:\Users\lenna\.m2\repository\org\eclipse\microprofile\openapi\microprofile-openapi-api\2.0.1\microprofile-openapi-api-2.0.1.jar;C:\Users\lenna\Programming\verteilte-anwendungen-lab2\frontend\target\frontend-webapp.jar;C:\Users\lenna\.m2\repository\javax\ws\rs\javax.ws.rs-api\2.1\javax.ws.rs-api-2.1.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-resteasy\2.16.6.Final\quarkus-resteasy-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-vertx-http\2.16.6.Final\quarkus-vertx-http-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-security-runtime-spi\2.16.6.Final\quarkus-security-runtime-spi-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-credentials\2.16.6.Final\quarkus-credentials-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-mutiny\2.16.6.Final\quarkus-mutiny-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-smallrye-context-propagation\2.16.6.Final\quarkus-smallrye-context-propagation-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\smallrye\smallrye-context-propagation\1.2.2\smallrye-context-propagation-1.2.2.jar;C:\Users\lenna\.m2\repository\io\smallrye\smallrye-context-propagation-api\1.2.2\smallrye-context-propagation-api-1.2.2.jar;C:\Users\lenna\.m2\repository\io\smallrye\smallrye-context-propagation-storage\1.2.2\smallrye-context-propagation-storage-1.2.2.jar;C:\Users\lenna\.m2\repository\io\smallrye\reactive\mutiny-smallrye-context-propagation\1.9.0\mutiny-smallrye-context-propagation-1.9.0.jar;C:\Users\lenna\.m2\repository\io\smallrye\common\smallrye-common-vertx-context\1.13.2\smallrye-common-vertx-context-1.13.2.jar;C:\Users\lenna\.m2\repository\io\vertx\vertx-core\4.3.7\vertx-core-4.3.7.jar;C:\Users\lenna\.m2\repository\io\netty\netty-common\4.1.86.Final\netty-common-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\io\netty\netty-buffer\4.1.86.Final\netty-buffer-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\io\netty\netty-transport\4.1.86.Final\netty-transport-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\io\netty\netty-handler\4.1.86.Final\netty-handler-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.86.Final\netty-transport-native-unix-common-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\io\netty\netty-handler-proxy\4.1.86.Final\netty-handler-proxy-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\io\netty\netty-codec-socks\4.1.86.Final\netty-codec-socks-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\io\netty\netty-codec-http\4.1.86.Final\netty-codec-http-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\io\netty\netty-codec-http2\4.1.86.Final\netty-codec-http2-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\io\netty\netty-resolver\4.1.86.Final\netty-resolver-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\io\netty\netty-resolver-dns\4.1.86.Final\netty-resolver-dns-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\io\netty\netty-codec-dns\4.1.86.Final\netty-codec-dns-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.14.2\jackson-core-2.14.2.jar;C:\Users\lenna\.m2\repository\io\smallrye\common\smallrye-common-constraint\1.13.2\smallrye-common-constraint-1.13.2.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-vertx-http-dev-console-runtime-spi\2.16.6.Final\quarkus-vertx-http-dev-console-runtime-spi-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\security\quarkus-security\1.1.4.Final\quarkus-security-1.1.4.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-vertx\2.16.6.Final\quarkus-vertx-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-netty\2.16.6.Final\quarkus-netty-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\netty\netty-codec\4.1.86.Final\netty-codec-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\com\aayushatharva\brotli4j\brotli4j\1.8.0\brotli4j-1.8.0.jar;C:\Users\lenna\.m2\repository\com\aayushatharva\brotli4j\native-windows-x86_64\1.8.0\native-windows-x86_64-1.8.0.jar;C:\Users\lenna\.m2\repository\io\netty\netty-codec-haproxy\4.1.86.Final\netty-codec-haproxy-4.1.86.Final.jar;C:\Users\lenna\.m2\repository\io\smallrye\common\smallrye-common-annotation\1.13.2\smallrye-common-annotation-1.13.2.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-vertx-latebound-mdc-provider\2.16.6.Final\quarkus-vertx-latebound-mdc-provider-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\smallrye\reactive\smallrye-mutiny-vertx-core\2.30.1\smallrye-mutiny-vertx-core-2.30.1.jar;C:\Users\lenna\.m2\repository\io\smallrye\reactive\smallrye-mutiny-vertx-runtime\2.30.1\smallrye-mutiny-vertx-runtime-2.30.1.jar;C:\Users\lenna\.m2\repository\io\smallrye\reactive\vertx-mutiny-generator\2.30.1\vertx-mutiny-generator-2.30.1.jar;C:\Users\lenna\.m2\repository\io\vertx\vertx-codegen\4.3.7\vertx-codegen-4.3.7.jar;C:\Users\lenna\.m2\repository\io\smallrye\smallrye-fault-tolerance-vertx\5.6.0\smallrye-fault-tolerance-vertx-5.6.0.jar;C:\Users\lenna\.m2\repository\io\smallrye\reactive\smallrye-mutiny-vertx-web\2.30.1\smallrye-mutiny-vertx-web-2.30.1.jar;C:\Users\lenna\.m2\repository\io\smallrye\reactive\smallrye-mutiny-vertx-web-common\2.30.1\smallrye-mutiny-vertx-web-common-2.30.1.jar;C:\Users\lenna\.m2\repository\io\smallrye\reactive\smallrye-mutiny-vertx-auth-common\2.30.1\smallrye-mutiny-vertx-auth-common-2.30.1.jar;C:\Users\lenna\.m2\repository\io\smallrye\reactive\smallrye-mutiny-vertx-bridge-common\2.30.1\smallrye-mutiny-vertx-bridge-common-2.30.1.jar;C:\Users\lenna\.m2\repository\io\smallrye\reactive\smallrye-mutiny-vertx-uri-template\2.30.1\smallrye-mutiny-vertx-uri-template-2.30.1.jar;C:\Users\lenna\.m2\repository\io\vertx\vertx-uri-template\4.3.7\vertx-uri-template-4.3.7.jar;C:\Users\lenna\.m2\repository\io\vertx\vertx-web\4.3.7\vertx-web-4.3.7.jar;C:\Users\lenna\.m2\repository\io\vertx\vertx-web-common\4.3.7\vertx-web-common-4.3.7.jar;C:\Users\lenna\.m2\repository\io\vertx\vertx-auth-common\4.3.7\vertx-auth-common-4.3.7.jar;C:\Users\lenna\.m2\repository\io\vertx\vertx-bridge-common\4.3.7\vertx-bridge-common-4.3.7.jar;C:\Users\lenna\.m2\repository\io\github\crac\org-crac\0.1.3\org-crac-0.1.3.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-resteasy-server-common\2.16.6.Final\quarkus-resteasy-server-common-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-resteasy-common\2.16.6.Final\quarkus-resteasy-common-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\org\jboss\resteasy\resteasy-core\4.7.7.Final\resteasy-core-4.7.7.Final.jar;C:\Users\lenna\.m2\repository\org\jboss\resteasy\resteasy-core-spi\4.7.7.Final\resteasy-core-spi-4.7.7.Final.jar;C:\Users\lenna\.m2\repository\com\ibm\async\asyncutil\0.1.0\asyncutil-0.1.0.jar;C:\Users\lenna\.m2\repository\jakarta\validation\jakarta.validation-api\2.0.2\jakarta.validation-api-2.0.2.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-resteasy-jsonb\2.16.6.Final\quarkus-resteasy-jsonb-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-jsonb\2.16.6.Final\quarkus-jsonb-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\org\eclipse\yasson\1.0.11\yasson-1.0.11.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-jsonp\2.16.6.Final\quarkus-jsonp-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\org\glassfish\jakarta.json\1.1.6\jakarta.json-1.1.6.jar;C:\Users\lenna\.m2\repository\org\jboss\resteasy\resteasy-json-binding-provider\4.7.7.Final\resteasy-json-binding-provider-4.7.7.Final.jar;C:\Users\lenna\.m2\repository\jakarta\json\bind\jakarta.json.bind-api\1.0.2\jakarta.json.bind-api-1.0.2.jar;C:\Users\lenna\.m2\repository\org\jboss\logging\jboss-logging\3.5.0.Final\jboss-logging-3.5.0.Final.jar;C:\Users\lenna\.m2\repository\org\jboss\resteasy\resteasy-json-p-provider\4.7.7.Final\resteasy-json-p-provider-4.7.7.Final.jar;C:\Users\lenna\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-hibernate-orm\2.16.6.Final\quarkus-hibernate-orm-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-core\2.16.6.Final\quarkus-core-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\lenna\.m2\repository\jakarta\enterprise\jakarta.enterprise.cdi-api\2.0.2\jakarta.enterprise.cdi-api-2.0.2.jar;C:\Users\lenna\.m2\repository\jakarta\el\jakarta.el-api\3.0.3\jakarta.el-api-3.0.3.jar;C:\Users\lenna\.m2\repository\jakarta\interceptor\jakarta.interceptor-api\1.2.5\jakarta.interceptor-api-1.2.5.jar;C:\Users\lenna\.m2\repository\jakarta\inject\jakarta.inject-api\1.0\jakarta.inject-api-1.0.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-ide-launcher\2.16.6.Final\quarkus-ide-launcher-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-development-mode-spi\2.16.6.Final\quarkus-development-mode-spi-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\smallrye\config\smallrye-config\2.13.3\smallrye-config-2.13.3.jar;C:\Users\lenna\.m2\repository\io\smallrye\config\smallrye-config-core\2.13.3\smallrye-config-core-2.13.3.jar;C:\Users\lenna\.m2\repository\org\eclipse\microprofile\config\microprofile-config-api\2.0.1\microprofile-config-api-2.0.1.jar;C:\Users\lenna\.m2\repository\io\smallrye\common\smallrye-common-expression\1.13.2\smallrye-common-expression-1.13.2.jar;C:\Users\lenna\.m2\repository\io\smallrye\common\smallrye-common-function\1.13.2\smallrye-common-function-1.13.2.jar;C:\Users\lenna\.m2\repository\io\smallrye\common\smallrye-common-classloader\1.13.2\smallrye-common-classloader-1.13.2.jar;C:\Users\lenna\.m2\repository\io\smallrye\config\smallrye-config-common\2.13.3\smallrye-config-common-2.13.3.jar;C:\Users\lenna\.m2\repository\org\jboss\logmanager\jboss-logmanager-embedded\1.0.11\jboss-logmanager-embedded-1.0.11.jar;C:\Users\lenna\.m2\repository\org\jboss\logging\jboss-logging-annotations\2.2.1.Final\jboss-logging-annotations-2.2.1.Final.jar;C:\Users\lenna\.m2\repository\org\jboss\threads\jboss-threads\3.4.3.Final\jboss-threads-3.4.3.Final.jar;C:\Users\lenna\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\lenna\.m2\repository\org\jboss\slf4j\slf4j-jboss-logmanager\1.2.0.Final\slf4j-jboss-logmanager-1.2.0.Final.jar;C:\Users\lenna\.m2\repository\org\graalvm\sdk\graal-sdk\22.3.0\graal-sdk-22.3.0.jar;C:\Users\lenna\.m2\repository\org\wildfly\common\wildfly-common\1.5.4.Final-format-001\wildfly-common-1.5.4.Final-format-001.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-bootstrap-runner\2.16.6.Final\quarkus-bootstrap-runner-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-fs-util\0.0.9\quarkus-fs-util-0.0.9.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-agroal\2.16.6.Final\quarkus-agroal-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-datasource\2.16.6.Final\quarkus-datasource-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\agroal\agroal-api\1.17\agroal-api-1.17.jar;C:\Users\lenna\.m2\repository\io\agroal\agroal-narayana\1.17\agroal-narayana-1.17.jar;C:\Users\lenna\.m2\repository\org\jboss\jboss-transaction-spi\7.6.0.Final\jboss-transaction-spi-7.6.0.Final.jar;C:\Users\lenna\.m2\repository\io\agroal\agroal-pool\1.17\agroal-pool-1.17.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-narayana-jta\2.16.6.Final\quarkus-narayana-jta-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-transaction-annotations\2.16.6.Final\quarkus-transaction-annotations-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\smallrye\smallrye-context-propagation-jta\1.2.2\smallrye-context-propagation-jta-1.2.2.jar;C:\Users\lenna\.m2\repository\io\smallrye\reactive\smallrye-reactive-converter-api\2.7.0\smallrye-reactive-converter-api-2.7.0.jar;C:\Users\lenna\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\lenna\.m2\repository\io\smallrye\reactive\smallrye-reactive-converter-mutiny\2.7.0\smallrye-reactive-converter-mutiny-2.7.0.jar;C:\Users\lenna\.m2\repository\org\jboss\narayana\jta\narayana-jta\5.13.1.Final\narayana-jta-5.13.1.Final.jar;C:\Users\lenna\.m2\repository\org\jboss\spec\javax\resource\jboss-connector-api_1.7_spec\1.0.0.Final\jboss-connector-api_1.7_spec-1.0.0.Final.jar;C:\Users\lenna\.m2\repository\org\jboss\narayana\jts\narayana-jts-integration\5.13.1.Final\narayana-jts-integration-5.13.1.Final.jar;C:\Users\lenna\.m2\repository\org\hibernate\hibernate-core\5.6.15.Final\hibernate-core-5.6.15.Final.jar;C:\Users\lenna\.m2\repository\net\bytebuddy\byte-buddy\1.12.18\byte-buddy-1.12.18.jar;C:\Users\lenna\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\lenna\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\lenna\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\lenna\.m2\repository\org\hibernate\hibernate-graalvm\5.6.15.Final\hibernate-graalvm-5.6.15.Final.jar;C:\Users\lenna\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.3-b02\jaxb-runtime-2.3.3-b02.jar;C:\Users\lenna\.m2\repository\org\glassfish\jaxb\txw2\2.3.3-b02\txw2-2.3.3-b02.jar;C:\Users\lenna\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.10\istack-commons-runtime-3.0.10.jar;C:\Users\lenna\.m2\repository\com\sun\activation\jakarta.activation\1.2.1\jakarta.activation-1.2.1.jar;C:\Users\lenna\.m2\repository\org\jboss\spec\javax\xml\bind\jboss-jaxb-api_2.3_spec\2.0.0.Final\jboss-jaxb-api_2.3_spec-2.0.0.Final.jar;C:\Users\lenna\.m2\repository\jakarta\persistence\jakarta.persistence-api\2.2.3\jakarta.persistence-api-2.2.3.jar;C:\Users\lenna\.m2\repository\jakarta\transaction\jakarta.transaction-api\1.3.3\jakarta.transaction-api-1.3.3.jar;C:\Users\lenna\.m2\repository\org\hibernate\quarkus-local-cache\0.1.1\quarkus-local-cache-0.1.1.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-caffeine\2.16.6.Final\quarkus-caffeine-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\com\github\ben-manes\caffeine\caffeine\3.1.1\caffeine-3.1.1.jar;C:\Users\lenna\.m2\repository\com\google\errorprone\error_prone_annotations\2.17.0\error_prone_annotations-2.17.0.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-hibernate-validator\2.16.6.Final\quarkus-hibernate-validator-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\org\hibernate\validator\hibernate-validator\6.2.5.Final\hibernate-validator-6.2.5.Final.jar;C:\Users\lenna\.m2\repository\org\glassfish\jakarta.el\3.0.4\jakarta.el-3.0.4.jar;C:\Users\lenna\.m2\repository\io\smallrye\config\smallrye-config-validator\2.13.3\smallrye-config-validator-2.13.3.jar;C:\Users\lenna\.m2\repository\org\jboss\spec\javax\ws\rs\jboss-jaxrs-api_2.1_spec\2.0.1.Final\jboss-jaxrs-api_2.1_spec-2.0.1.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-jdbc-mysql\2.16.6.Final\quarkus-jdbc-mysql-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\mysql\mysql-connector-java\8.0.30\mysql-connector-java-8.0.30.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-liquibase\2.16.6.Final\quarkus-liquibase-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\org\liquibase\liquibase-core\4.18.0\liquibase-core-4.18.0.jar;C:\Users\lenna\.m2\repository\com\opencsv\opencsv\5.7.1\opencsv-5.7.1.jar;C:\Users\lenna\.m2\repository\org\apache\commons\commons-text\1.10.0\commons-text-1.10.0.jar;C:\Users\lenna\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\lenna\.m2\repository\org\osgi\osgi.core\6.0.0\osgi.core-6.0.0.jar;C:\Users\lenna\.m2\repository\org\yaml\snakeyaml\1.33\snakeyaml-1.33.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-jaxb\2.16.6.Final\quarkus-jaxb-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-jaxp\2.16.6.Final\quarkus-jaxp-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-datasource-common\2.16.6.Final\quarkus-datasource-common-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-arc\2.16.6.Final\quarkus-arc-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\arc\arc\2.16.6.Final\arc-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\smallrye\reactive\mutiny\1.9.0\mutiny-1.9.0.jar;C:\Users\lenna\.m2\repository\org\eclipse\microprofile\context-propagation\microprofile-context-propagation-api\1.2\microprofile-context-propagation-api-1.2.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-junit5\2.16.6.Final\quarkus-junit5-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-bootstrap-core\2.16.6.Final\quarkus-bootstrap-core-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-bootstrap-app-model\2.16.6.Final\quarkus-bootstrap-app-model-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\smallrye\common\smallrye-common-io\1.13.2\smallrye-common-io-1.13.2.jar;C:\Users\lenna\.m2\repository\org\eclipse\sisu\org.eclipse.sisu.inject\0.3.5\org.eclipse.sisu.inject-0.3.5.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-test-common\2.16.6.Final\quarkus-test-common-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-core-deployment\2.16.6.Final\quarkus-core-deployment-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\org\aesh\readline\2.2\readline-2.2.jar;C:\Users\lenna\.m2\repository\org\fusesource\jansi\jansi\1.18\jansi-1.18.jar;C:\Users\lenna\.m2\repository\org\aesh\aesh\2.7\aesh-2.7.jar;C:\Users\lenna\.m2\repository\io\quarkus\gizmo\gizmo\1.6.0.Final\gizmo-1.6.0.Final.jar;C:\Users\lenna\.m2\repository\org\ow2\asm\asm-util\9.4\asm-util-9.4.jar;C:\Users\lenna\.m2\repository\org\ow2\asm\asm-analysis\9.4\asm-analysis-9.4.jar;C:\Users\lenna\.m2\repository\org\ow2\asm\asm\9.4\asm-9.4.jar;C:\Users\lenna\.m2\repository\org\ow2\asm\asm-commons\9.4\asm-commons-9.4.jar;C:\Users\lenna\.m2\repository\org\ow2\asm\asm-tree\9.4\asm-tree-9.4.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-class-change-agent\2.16.6.Final\quarkus-class-change-agent-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-devtools-utilities\2.16.6.Final\quarkus-devtools-utilities-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-builder\2.16.6.Final\quarkus-builder-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\org\junit\platform\junit-platform-launcher\1.9.2\junit-platform-launcher-1.9.2.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-bootstrap-maven-resolver\2.16.6.Final\quarkus-bootstrap-maven-resolver-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\org\apache\maven\maven-embedder\3.8.6\maven-embedder-3.8.6.jar;C:\Users\lenna\.m2\repository\org\apache\maven\maven-settings\3.8.6\maven-settings-3.8.6.jar;C:\Users\lenna\.m2\repository\org\apache\maven\maven-core\3.8.6\maven-core-3.8.6.jar;C:\Users\lenna\.m2\repository\org\apache\maven\maven-artifact\3.8.6\maven-artifact-3.8.6.jar;C:\Users\lenna\.m2\repository\org\codehaus\plexus\plexus-component-annotations\2.1.0\plexus-component-annotations-2.1.0.jar;C:\Users\lenna\.m2\repository\org\apache\maven\maven-plugin-api\3.8.6\maven-plugin-api-3.8.6.jar;C:\Users\lenna\.m2\repository\org\apache\maven\maven-model\3.8.6\maven-model-3.8.6.jar;C:\Users\lenna\.m2\repository\org\apache\maven\maven-model-builder\3.8.6\maven-model-builder-3.8.6.jar;C:\Users\lenna\.m2\repository\org\apache\maven\maven-builder-support\3.8.6\maven-builder-support-3.8.6.jar;C:\Users\lenna\.m2\repository\org\apache\maven\resolver\maven-resolver-api\1.6.3\maven-resolver-api-1.6.3.jar;C:\Users\lenna\.m2\repository\org\apache\maven\resolver\maven-resolver-util\1.6.3\maven-resolver-util-1.6.3.jar;C:\Users\lenna\.m2\repository\org\apache\maven\shared\maven-shared-utils\3.3.4\maven-shared-utils-3.3.4.jar;C:\Users\lenna\.m2\repository\com\google\inject\guice\4.2.2\guice-4.2.2-no_aop.jar;C:\Users\lenna\.m2\repository\com\google\guava\guava\31.1-jre\guava-31.1-jre.jar;C:\Users\lenna\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\lenna\.m2\repository\org\codehaus\plexus\plexus-classworlds\2.6.0\plexus-classworlds-2.6.0.jar;C:\Users\lenna\.m2\repository\org\codehaus\plexus\plexus-sec-dispatcher\2.0\plexus-sec-dispatcher-2.0.jar;C:\Users\lenna\.m2\repository\org\codehaus\plexus\plexus-cipher\2.0\plexus-cipher-2.0.jar;C:\Users\lenna\.m2\repository\commons-cli\commons-cli\1.4\commons-cli-1.4.jar;C:\Users\lenna\.m2\repository\org\eclipse\sisu\org.eclipse.sisu.plexus\0.3.5\org.eclipse.sisu.plexus-0.3.5.jar;C:\Users\lenna\.m2\repository\org\apache\maven\maven-settings-builder\3.8.6\maven-settings-builder-3.8.6.jar;C:\Users\lenna\.m2\repository\org\codehaus\plexus\plexus-interpolation\1.26\plexus-interpolation-1.26.jar;C:\Users\lenna\.m2\repository\org\apache\maven\maven-resolver-provider\3.8.6\maven-resolver-provider-3.8.6.jar;C:\Users\lenna\.m2\repository\org\apache\maven\maven-repository-metadata\3.8.6\maven-repository-metadata-3.8.6.jar;C:\Users\lenna\.m2\repository\org\apache\maven\resolver\maven-resolver-spi\1.6.3\maven-resolver-spi-1.6.3.jar;C:\Users\lenna\.m2\repository\org\apache\maven\resolver\maven-resolver-impl\1.6.3\maven-resolver-impl-1.6.3.jar;C:\Users\lenna\.m2\repository\org\codehaus\plexus\plexus-utils\3.3.0\plexus-utils-3.3.0.jar;C:\Users\lenna\.m2\repository\org\apache\maven\resolver\maven-resolver-connector-basic\1.6.3\maven-resolver-connector-basic-1.6.3.jar;C:\Users\lenna\.m2\repository\org\apache\maven\resolver\maven-resolver-transport-wagon\1.6.3\maven-resolver-transport-wagon-1.6.3.jar;C:\Users\lenna\.m2\repository\org\apache\maven\wagon\wagon-http\3.5.1\wagon-http-3.5.1.jar;C:\Users\lenna\.m2\repository\org\apache\maven\wagon\wagon-http-shared\3.5.1\wagon-http-shared-3.5.1.jar;C:\Users\lenna\.m2\repository\org\apache\maven\wagon\wagon-provider-api\3.5.1\wagon-provider-api-3.5.1.jar;C:\Users\lenna\.m2\repository\org\apache\maven\wagon\wagon-file\3.5.1\wagon-file-3.5.1.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-bootstrap-gradle-resolver\2.16.6.Final\quarkus-bootstrap-gradle-resolver-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\io\smallrye\jandex\3.0.5\jandex-3.0.5.jar;C:\Users\lenna\.m2\repository\org\jboss\logging\commons-logging-jboss-logging\1.0.0.Final\commons-logging-jboss-logging-1.0.0.Final.jar;C:\Users\lenna\.m2\repository\io\quarkus\quarkus-junit5-properties\2.16.6.Final\quarkus-junit5-properties-2.16.6.Final.jar;C:\Users\lenna\.m2\repository\org\junit\jupiter\junit-jupiter\5.9.2\junit-jupiter-5.9.2.jar;C:\Users\lenna\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.2\junit-jupiter-api-5.9.2.jar;C:\Users\lenna\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\lenna\.m2\repository\org\junit\platform\junit-platform-commons\1.9.2\junit-platform-commons-1.9.2.jar;C:\Users\lenna\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\lenna\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.2\junit-jupiter-params-5.9.2.jar;C:\Users\lenna\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.2\junit-jupiter-engine-5.9.2.jar;C:\Users\lenna\.m2\repository\org\junit\platform\junit-platform-engine\1.9.2\junit-platform-engine-1.9.2.jar;C:\Users\lenna\.m2\repository\com\thoughtworks\xstream\xstream\1.4.20\xstream-1.4.20.jar;C:\Users\lenna\.m2\repository\io\github\x-stream\mxparser\1.2.2\mxparser-1.2.2.jar;C:\Users\lenna\.m2\repository\xmlpull\xmlpull\1.1.3.1\xmlpull-1.1.3.1.jar;C:\Users\lenna\.m2\repository\io\rest-assured\rest-assured\4.5.1\rest-assured-4.5.1.jar;C:\Users\lenna\.m2\repository\org\codehaus\groovy\groovy\3.0.9\groovy-3.0.9.jar;C:\Users\lenna\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.9\groovy-xml-3.0.9.jar;C:\Users\lenna\.m2\repository\org\apache\httpcomponents\httpclient\4.5.14\httpclient-4.5.14.jar;C:\Users\lenna\.m2\repository\org\apache\httpcomponents\httpcore\4.4.16\httpcore-4.4.16.jar;C:\Users\lenna\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\lenna\.m2\repository\org\apache\httpcomponents\httpmime\4.5.14\httpmime-4.5.14.jar;C:\Users\lenna\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\lenna\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\lenna\.m2\repository\io\rest-assured\json-path\4.5.1\json-path-4.5.1.jar;C:\Users\lenna\.m2\repository\org\codehaus\groovy\groovy-json\3.0.9\groovy-json-3.0.9.jar;C:\Users\lenna\.m2\repository\io\rest-assured\rest-assured-common\4.5.1\rest-assured-common-4.5.1.jar;C:\Users\lenna\.m2\repository\io\rest-assured\xml-path\4.5.1\xml-path-4.5.1.jar;C:\Users\lenna\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\lenna"/>
+    <property name="user.language" value="en"/>
+    <property name="jboss.log-version" value="false"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="io.netty.allocator.maxOrder" value="3"/>
+    <property name="java.version.date" value="2023-04-18"/>
+    <property name="liquibase.hub.mode" value="off"/>
+    <property name="java.home" value="C:\Users\lenna\.jdks\openjdk-20.0.1"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\lenna\Programming\verteilte-anwendungen-lab2\backend"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\lenna\AppData\Local\Temp\surefire1501378236320730000\surefirebooter-20230608134020912_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="20.0.1+9-29"/>
+    <property name="user.name" value="lenna"/>
+    <property name="com.mysql.cj.disableAbandonedConnectionCleanup" value="true"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="dev.resteasy.exception.mapper" value="false"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\lenna\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\lenna\AppData\Local\Temp\"/>
+    <property name="quarkus.log.file.path" value="target\quarkus.log"/>
+    <property name="idea.version" value="2023.1.1"/>
+    <property name="java.version" value="20.0.1"/>
+    <property name="java.util.concurrent.ForkJoinPool.common.threadFactory" value="io.quarkus.bootstrap.forkjoin.QuarkusForkJoinWorkerThreadFactory"/>
+    <property name="user.dir" value="C:\Users\lenna\Programming\verteilte-anwendungen-lab2\backend"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="hibernate.bytecode.provider" value="none"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="vertx.disableDnsResolver" value="true"/>
+    <property name="user.language.format" value="de"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.util.logging.manager" value="org.jboss.logmanager.LogManager"/>
+    <property name="java.library.path" value="C:\Users\lenna\.jdks\openjdk-20.0.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Eclipse Adoptium\jdk-17.0.7.7-hotspot\bin;C:\Python311\Scripts\;C:\Python311\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\ProgramData\chocolatey\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\GitHub CLI\;C:\Program Files\PowerShell\7\;C:\Program Files\Amazon\AWSCLIV2\;C:\Program Files\Amazon\AWSSAMCLI\bin\;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\Program Files (x86)\Microsoft VS Code Insiders\bin;C:\Users\lenna\AppData\Local\Microsoft\WindowsApps;C:\Users\lenna\AppData\Local\JetBrains\Toolbox\scripts;C:\Users\lenna\AppData\Roaming\npm;C:\Program Files\1Password CLI;C:\Python311;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="vertx.disableTCCL" value="true"/>
+    <property name="java.vm.version" value="20.0.1+9-29"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="io.netty.machineId" value="5b:d2:92:ab:e9:af:61:f3"/>
+    <property name="java.class.version" value="64.0"/>
+  </properties>
+  <testcase name="testNotFound" classname="de.berlin.htw.boundary.ProjectResourceTest" time="3.056">
+    <system-out><![CDATA[2023-06-08 13:40:26,426 WARN  [io.qua.hib.orm.dep.HibernateOrmProcessor] (build-4) Could not find a suitable persistence unit for model classes:
+	- de.berlin.htw.lib.model.ProjectModel
+	- de.berlin.htw.lib.model.UserModel
+2023-06-08 13:40:31,583 INFO  [io.agr.pool] (main) Datasource '<default>': Initial size smaller than min. Connections will be created when necessary
+2023-06-08 13:40:33,068 INFO  [liq.lockservice] (main) Successfully acquired change log lock
+2023-06-08 13:40:34,114 INFO  [liq.changelog] (main) Reading from VA_APP.DATABASECHANGELOG
+2023-06-08 13:40:34,773 INFO  [liq.lockservice] (main) Successfully released change log lock
+2023-06-08 13:40:34,788 INFO  [liq.lockservice] (main) Successfully released change log lock
+2023-06-08 13:40:36,028 INFO  [io.quarkus] (main) backend 1.0.0-SNAPSHOT on JVM (powered by Quarkus 2.16.6.Final) started in 11.994s. Listening on: http://localhost:8081
+2023-06-08 13:40:36,029 INFO  [io.quarkus] (main) Profile test activated. 
+2023-06-08 13:40:36,030 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, hibernate-validator, jdbc-mysql, liquibase, narayana-jta, resteasy, resteasy-jsonb, smallrye-context-propagation, vertx]
+Request method:	GET
+Request URI:	http://localhost:8081/api/v2/projects/7c7ba66a-29a0-4cbb-865c-2671f4e9c27a
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+2023-06-08 13:40:40,469 INFO  [de.ber.htw.con.ProjectController] (executor-thread-0) Retrieving an existing project (id = 7c7ba66a-29a0-4cbb-865c-2671f4e9c27a)
+2023-06-08 13:40:40,528 ERROR [de.ber.htw.con.ProjectController] (executor-thread-0) Project does not exist
+HTTP/1.1 404 Not Found
+Access-Control-Allow-Headers: *
+Access-Control-Allow-Methods: *
+Access-Control-Allow-Origin: *
+content-length: 0
+]]></system-out>
+  </testcase>
+  <testcase name="testInvalidProject" classname="de.berlin.htw.boundary.ProjectResourceTest" time="0.094">
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:8081/api/v2/projects/anyId
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+2023-06-08 13:40:40,866 INFO  [de.ber.htw.con.ProjectController] (executor-thread-0) Retrieving an existing project (id = anyId)
+2023-06-08 13:40:40,870 ERROR [org.jbo.res.res.i18n] (executor-thread-0) RESTEASY002010: Failed to execute: javax.ws.rs.BadRequestException: Invalid project id
+	at de.berlin.htw.boundary.ProjectResource.getProject(ProjectResource.java:62)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:170)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:130)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.internalInvokeOnTarget(ResourceMethodInvoker.java:660)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTargetAfterFilter(ResourceMethodInvoker.java:524)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.lambda$invokeOnTarget$2(ResourceMethodInvoker.java:474)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:364)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTarget(ResourceMethodInvoker.java:476)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:434)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:408)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:69)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:492)
+	at org.jboss.resteasy.core.SynchronousDispatcher.lambda$invoke$4(SynchronousDispatcher.java:261)
+	at org.jboss.resteasy.core.SynchronousDispatcher.lambda$preprocess$0(SynchronousDispatcher.java:161)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:364)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:82)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:147)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:93)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$14.runWith(VertxCoreRecorder.java:576)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: java.lang.IllegalArgumentException: Invalid UUID string: anyId
+	at java.base/java.util.UUID.fromString1(UUID.java:280)
+	at java.base/java.util.UUID.fromString(UUID.java:258)
+	at de.berlin.htw.entity.dao.ProjectRepository.get(ProjectRepository.java:42)
+	at de.berlin.htw.entity.dao.ProjectRepository_Subclass.get$$superforward1(Unknown Source)
+	at de.berlin.htw.entity.dao.ProjectRepository_Subclass$$function$$2.apply(Unknown Source)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:54)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInNoTx(TransactionalInterceptorBase.java:312)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorSupports.doIntercept(TransactionalInterceptorSupports.java:32)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:58)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorSupports.intercept(TransactionalInterceptorSupports.java:26)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorSupports_Bean.intercept(Unknown Source)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:41)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:33)
+	at de.berlin.htw.entity.dao.ProjectRepository_Subclass.get(Unknown Source)
+	at de.berlin.htw.entity.dao.ProjectRepository_ClientProxy.get(Unknown Source)
+	at de.berlin.htw.control.ProjectController.getProject(ProjectController.java:65)
+	at de.berlin.htw.control.ProjectController_ClientProxy.getProject(Unknown Source)
+	at de.berlin.htw.boundary.ProjectResource.getProject(ProjectResource.java:59)
+	... 28 more
+
+HTTP/1.1 400 Bad Request
+Access-Control-Allow-Headers: *
+Access-Control-Allow-Methods: *
+Access-Control-Allow-Origin: *
+content-length: 0
+]]></system-out>
+  </testcase>
+  <testcase name="testCreateAndDelete" classname="de.berlin.htw.boundary.ProjectResourceTest" time="1.081">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	http://localhost:8081/api/v2/projects
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "project_name": "Test Project"
+}
+2023-06-08 13:40:41,609 INFO  [de.ber.htw.con.ProjectController] (executor-thread-0) Creating a new project (name=Test Project)
+HTTP/1.1 201 Created
+Access-Control-Allow-Headers: *
+Access-Control-Allow-Methods: *
+Access-Control-Allow-Origin: *
+Location: http://localhost:8081/api/v2/projects/6cc708b1-2374-49b3-921a-d37d20d0d8b9
+content-length: 0
+Request method:	DELETE
+Request URI:	http://localhost:8081/api/v2/projects/6cc708b1-2374-49b3-921a-d37d20d0d8b9
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+2023-06-08 13:40:41,888 INFO  [de.ber.htw.con.ProjectController] (executor-thread-0) Deleting an existing project (id = 6cc708b1-2374-49b3-921a-d37d20d0d8b9)
+HTTP/1.1 204 No Content
+Access-Control-Allow-Headers: *
+Access-Control-Allow-Methods: *
+Access-Control-Allow-Origin: *
+Request method:	GET
+Request URI:	http://localhost:8081/api/v2/projects/6cc708b1-2374-49b3-921a-d37d20d0d8b9
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+2023-06-08 13:40:41,956 INFO  [de.ber.htw.con.ProjectController] (executor-thread-0) Retrieving an existing project (id = 6cc708b1-2374-49b3-921a-d37d20d0d8b9)
+2023-06-08 13:40:41,963 ERROR [de.ber.htw.con.ProjectController] (executor-thread-0) Project does not exist
+HTTP/1.1 404 Not Found
+Access-Control-Allow-Headers: *
+Access-Control-Allow-Methods: *
+Access-Control-Allow-Origin: *
+content-length: 0
+]]></system-out>
+  </testcase>
+  <testcase name="testCreateAndGetAll" classname="de.berlin.htw.boundary.ProjectResourceTest" time="1.77">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	http://localhost:8081/api/v2/projects
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "project_name": "Test Project"
+}
+2023-06-08 13:40:42,045 INFO  [de.ber.htw.con.ProjectController] (executor-thread-0) Creating a new project (name=Test Project)
+HTTP/1.1 201 Created
+Access-Control-Allow-Headers: *
+Access-Control-Allow-Methods: *
+Access-Control-Allow-Origin: *
+Location: http://localhost:8081/api/v2/projects/f33d4db7-8624-41c9-9d04-ff67cb12695a
+content-length: 0
+Request method:	POST
+Request URI:	http://localhost:8081/api/v2/projects
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "project_name": "Test Project 2"
+}
+2023-06-08 13:40:42,095 INFO  [de.ber.htw.con.ProjectController] (executor-thread-0) Creating a new project (name=Test Project 2)
+HTTP/1.1 201 Created
+Access-Control-Allow-Headers: *
+Access-Control-Allow-Methods: *
+Access-Control-Allow-Origin: *
+Location: http://localhost:8081/api/v2/projects/9ea30198-ac4f-4cd0-87bf-f05673b5ed5a
+content-length: 0
+Request method:	GET
+Request URI:	http://localhost:8081/api/v2/projects
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+2023-06-08 13:40:42,143 INFO  [de.ber.htw.con.ProjectController] (executor-thread-0) Retrieving all existing projects
+HTTP/1.1 200 OK
+Access-Control-Allow-Headers: *
+Access-Control-Allow-Methods: *
+Access-Control-Allow-Origin: *
+Content-Type: application/json
+content-length: 177
+
+[
+    {
+        "id": "9ea30198-ac4f-4cd0-87bf-f05673b5ed5a",
+        "project_name": "Test Project 2",
+        "users": [
+            
+        ]
+    },
+    {
+        "id": "f33d4db7-8624-41c9-9d04-ff67cb12695a",
+        "project_name": "Test Project",
+        "users": [
+            
+        ]
+    }
+]
+]]></system-out>
+  </testcase>
+  <testcase name="testCreateAndUnlink" classname="de.berlin.htw.boundary.ProjectResourceTest" time="0.601">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	http://localhost:8081/api/v2/projects
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "project_name": "Test Project"
+}
+2023-06-08 13:40:43,837 INFO  [de.ber.htw.con.ProjectController] (executor-thread-0) Creating a new project (name=Test Project)
+HTTP/1.1 201 Created
+Access-Control-Allow-Headers: *
+Access-Control-Allow-Methods: *
+Access-Control-Allow-Origin: *
+Location: http://localhost:8081/api/v2/projects/c88ad9e3-e0a5-45e5-b718-f37d7a51bfd3
+content-length: 0
+Request method:	POST
+Request URI:	http://localhost:8081/api/v2/users
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "user_email": "max.mustermann@example.org",
+    "user_name": "Max Mustermann"
+}
+2023-06-08 13:40:43,949 INFO  [de.ber.htw.con.UserController] (executor-thread-0) Creating a new user (name=Max Mustermann, email=max.mustermann@example.org)
+HTTP/1.1 201 Created
+Access-Control-Allow-Headers: *
+Access-Control-Allow-Methods: *
+Access-Control-Allow-Origin: *
+Location: http://localhost:8081/api/v2/users/0cd37929-5774-4d05-bd82-de6dff7e482c
+content-length: 0
+Request method:	PATCH
+Request URI:	http://localhost:8081/api/v2/projects/c88ad9e3-e0a5-45e5-b718-f37d7a51bfd3/users/0cd37929-5774-4d05-bd82-de6dff7e482c
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+2023-06-08 13:40:44,055 INFO  [de.ber.htw.con.ProjectController] (executor-thread-0) adding a user (0cd37929-5774-4d05-bd82-de6dff7e482c) to an existing project (c88ad9e3-e0a5-45e5-b718-f37d7a51bfd3)
+2023-06-08 13:40:44,078 INFO  [de.ber.htw.con.ProjectController] (executor-thread-0) updated project to: de.berlin.htw.entity.dto.ProjectEntity@9acf1c07
+HTTP/1.1 200 OK
+Access-Control-Allow-Headers: *
+Access-Control-Allow-Methods: *
+Access-Control-Allow-Origin: *
+Content-Type: application/json
+content-length: 287
+
+{
+    "id": "c88ad9e3-e0a5-45e5-b718-f37d7a51bfd3",
+    "project_name": "Test Project",
+    "users": [
+        {
+            "createdAt": "2023-06-08T11:40:44Z[UTC]",
+            "modifiedAt": "2023-06-08T11:40:44Z[UTC]",
+            "email": "max.mustermann@example.org",
+            "id": "0cd37929-5774-4d05-bd82-de6dff7e482c",
+            "name": "Max Mustermann",
+            "projects": [
+                
+            ]
+        }
+    ]
+}
+Request method:	DELETE
+Request URI:	http://localhost:8081/api/v2/projects/c88ad9e3-e0a5-45e5-b718-f37d7a51bfd3/users/0cd37929-5774-4d05-bd82-de6dff7e482c
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+2023-06-08 13:40:44,213 INFO  [de.ber.htw.con.ProjectController] (executor-thread-0) removing user (0cd37929-5774-4d05-bd82-de6dff7e482c) from an existing project (c88ad9e3-e0a5-45e5-b718-f37d7a51bfd3)
+2023-06-08 13:40:44,233 INFO  [de.ber.htw.con.ProjectController] (executor-thread-0) updated project to: de.berlin.htw.entity.dto.ProjectEntity@9acf1c07
+HTTP/1.1 200 OK
+Access-Control-Allow-Headers: *
+Access-Control-Allow-Methods: *
+Access-Control-Allow-Origin: *
+Content-Type: application/json
+content-length: 86
+
+{
+    "id": "c88ad9e3-e0a5-45e5-b718-f37d7a51bfd3",
+    "project_name": "Test Project",
+    "users": [
+        
+    ]
+}
+Request method:	GET
+Request URI:	http://localhost:8081/api/v2/projects/c88ad9e3-e0a5-45e5-b718-f37d7a51bfd3
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+2023-06-08 13:40:44,279 INFO  [de.ber.htw.con.ProjectController] (executor-thread-0) Retrieving an existing project (id = c88ad9e3-e0a5-45e5-b718-f37d7a51bfd3)
+HTTP/1.1 200 OK
+Access-Control-Allow-Headers: *
+Access-Control-Allow-Methods: *
+Access-Control-Allow-Origin: *
+Content-Type: application/json
+content-length: 86
+
+{
+    "id": "c88ad9e3-e0a5-45e5-b718-f37d7a51bfd3",
+    "project_name": "Test Project",
+    "users": [
+        
+    ]
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testCreateAndUpdate" classname="de.berlin.htw.boundary.ProjectResourceTest" time="0.238">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	http://localhost:8081/api/v2/projects
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "project_name": "Test Project"
+}
+2023-06-08 13:40:44,427 INFO  [de.ber.htw.con.ProjectController] (executor-thread-0) Creating a new project (name=Test Project)
+HTTP/1.1 201 Created
+Access-Control-Allow-Headers: *
+Access-Control-Allow-Methods: *
+Access-Control-Allow-Origin: *
+Location: http://localhost:8081/api/v2/projects/08a48779-eee7-471c-9ad6-5eee1e4af99b
+content-length: 0
+Request method:	PATCH
+Request URI:	http://localhost:8081/api/v2/projects/08a48779-eee7-471c-9ad6-5eee1e4af99b
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "project_name": "Test Project 2"
+}
+2023-06-08 13:40:44,481 INFO  [de.ber.htw.con.ProjectController] (executor-thread-0) Updating an existing project (de.berlin.htw.lib.dto.ProjectJson@314fdefb)
+HTTP/1.1 200 OK
+Access-Control-Allow-Headers: *
+Access-Control-Allow-Methods: *
+Access-Control-Allow-Origin: *
+Content-Type: application/json
+content-length: 88
+
+{
+    "id": "08a48779-eee7-471c-9ad6-5eee1e4af99b",
+    "project_name": "Test Project 2",
+    "users": [
+        
+    ]
+}
+Request method:	GET
+Request URI:	http://localhost:8081/api/v2/projects/08a48779-eee7-471c-9ad6-5eee1e4af99b
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+2023-06-08 13:40:44,545 INFO  [de.ber.htw.con.ProjectController] (executor-thread-0) Retrieving an existing project (id = 08a48779-eee7-471c-9ad6-5eee1e4af99b)
+HTTP/1.1 200 OK
+Access-Control-Allow-Headers: *
+Access-Control-Allow-Methods: *
+Access-Control-Allow-Origin: *
+Content-Type: application/json
+content-length: 88
+
+{
+    "id": "08a48779-eee7-471c-9ad6-5eee1e4af99b",
+    "project_name": "Test Project 2",
+    "users": [
+        
+    ]
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testCreateAndLink" classname="de.berlin.htw.boundary.ProjectResourceTest" time="0.394">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;500&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <500>.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:499)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:684)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:127)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at de.berlin.htw.boundary.ProjectResourceTest.testCreateAndLink(ProjectResourceTest.java:230)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1002)
+	at io.quarkus.test.junit.QuarkusTestExtension.interceptTestMethod(QuarkusTestExtension.java:816)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:50)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+	Suppressed: org.jboss.resteasy.spi.UnhandledException: javax.ws.rs.ProcessingException: RESTEASY008205: JSON Binding serialization error javax.json.bind.JsonbException: Unable to serialize property 'users' from de.berlin.htw.lib.dto.ProjectJson
+		at org.jboss.resteasy.core.ExceptionHandler.handleException(ExceptionHandler.java:368)
+		at org.jboss.resteasy.core.SynchronousDispatcher.writeException(SynchronousDispatcher.java:218)
+		at org.jboss.resteasy.core.SynchronousDispatcher.writeResponse(SynchronousDispatcher.java:614)
+		at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:524)
+		at org.jboss.resteasy.core.SynchronousDispatcher.lambda$invoke$4(SynchronousDispatcher.java:261)
+		at org.jboss.resteasy.core.SynchronousDispatcher.lambda$preprocess$0(SynchronousDispatcher.java:161)
+		at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:364)
+		at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+		at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+		at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:82)
+		at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:147)
+		at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:93)
+		at io.quarkus.vertx.core.runtime.VertxCoreRecorder$14.runWith(VertxCoreRecorder.java:576)
+		at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+		at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+		at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+		at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+	Caused by: javax.ws.rs.ProcessingException: RESTEASY008205: JSON Binding serialization error javax.json.bind.JsonbException: Unable to serialize property 'users' from de.berlin.htw.lib.dto.ProjectJson
+		at org.jboss.resteasy.plugins.providers.jsonb.JsonBindingProvider.asyncWriteTo(JsonBindingProvider.java:158)
+		at org.jboss.resteasy.core.interception.jaxrs.ServerWriterInterceptorContext.writeTo(ServerWriterInterceptorContext.java:87)
+		at org.jboss.resteasy.core.interception.jaxrs.AbstractWriterInterceptorContext.asyncProceed(AbstractWriterInterceptorContext.java:203)
+		at org.jboss.resteasy.core.interception.jaxrs.AbstractWriterInterceptorContext.getStarted(AbstractWriterInterceptorContext.java:166)
+		at org.jboss.resteasy.core.interception.jaxrs.ServerWriterInterceptorContext.lambda$getStarted$0(ServerWriterInterceptorContext.java:73)
+		at org.jboss.resteasy.core.interception.jaxrs.ServerWriterInterceptorContext.aroundWriteTo(ServerWriterInterceptorContext.java:93)
+		at org.jboss.resteasy.core.interception.jaxrs.ServerWriterInterceptorContext.getStarted(ServerWriterInterceptorContext.java:73)
+		at org.jboss.resteasy.core.ServerResponseWriter.lambda$writeNomapResponse$3(ServerResponseWriter.java:163)
+		at org.jboss.resteasy.core.interception.jaxrs.ContainerResponseContextImpl.filter(ContainerResponseContextImpl.java:410)
+		at org.jboss.resteasy.core.ServerResponseWriter.executeFilters(ServerResponseWriter.java:252)
+		at org.jboss.resteasy.core.ServerResponseWriter.writeNomapResponse(ServerResponseWriter.java:101)
+		at org.jboss.resteasy.core.ServerResponseWriter.writeNomapResponse(ServerResponseWriter.java:74)
+		at org.jboss.resteasy.core.SynchronousDispatcher.writeResponse(SynchronousDispatcher.java:594)
+		... 16 more
+	Caused by: javax.json.bind.JsonbException: Unable to serialize property 'users' from de.berlin.htw.lib.dto.ProjectJson
+		at org.eclipse.yasson.internal.serializer.ObjectSerializer.serializeInternal(ObjectSerializer.java:71)
+		at org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serialize(AbstractContainerSerializer.java:107)
+		at org.eclipse.yasson.internal.Marshaller.serializeRoot(Marshaller.java:147)
+		at org.eclipse.yasson.internal.Marshaller.marshall(Marshaller.java:73)
+		at org.eclipse.yasson.internal.Marshaller.marshall(Marshaller.java:101)
+		at org.eclipse.yasson.internal.JsonBinding.toJson(JsonBinding.java:126)
+		at org.jboss.resteasy.plugins.providers.jsonb.JsonBindingProvider.asyncWriteTo(JsonBindingProvider.java:154)
+		... 28 more
+	Caused by: javax.json.bind.JsonbException: Unable to serialize property 'projects' from de.berlin.htw.entity.dto.UserEntity
+		at org.eclipse.yasson.internal.serializer.ObjectSerializer.serializeInternal(ObjectSerializer.java:71)
+		at org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serialize(AbstractContainerSerializer.java:107)
+		at org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serializerCaptor(AbstractContainerSerializer.java:125)
+		at org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serializeItem(AbstractContainerSerializer.java:194)
+		at org.eclipse.yasson.internal.serializer.CollectionSerializer.serializeInternal(CollectionSerializer.java:39)
+		at org.eclipse.yasson.internal.serializer.CollectionSerializer.serializeInternal(CollectionSerializer.java:25)
+		at org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serialize(AbstractContainerSerializer.java:107)
+		at org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serializerCaptor(AbstractContainerSerializer.java:125)
+		at org.eclipse.yasson.internal.serializer.ObjectSerializer.marshallProperty(ObjectSerializer.java:121)
+		at org.eclipse.yasson.internal.serializer.ObjectSerializer.serializeInternal(ObjectSerializer.java:69)
+		... 34 more
+	Caused by: javax.json.bind.JsonbException: Recursive reference has been found in class class de.berlin.htw.entity.dto.ProjectEntity.
+		at org.eclipse.yasson.internal.serializer.ObjectSerializer.serializeInternal(ObjectSerializer.java:76)
+		at org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serialize(AbstractContainerSerializer.java:107)
+		at org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serializerCaptor(AbstractContainerSerializer.java:125)
+		at org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serializeItem(AbstractContainerSerializer.java:194)
+		at org.eclipse.yasson.internal.serializer.CollectionSerializer.serializeInternal(CollectionSerializer.java:39)
+		at org.eclipse.yasson.internal.serializer.CollectionSerializer.serializeInternal(CollectionSerializer.java:25)
+		at org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serialize(AbstractContainerSerializer.java:107)
+		at org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serializerCaptor(AbstractContainerSerializer.java:125)
+		at org.eclipse.yasson.internal.serializer.ObjectSerializer.marshallProperty(ObjectSerializer.java:121)
+		at org.eclipse.yasson.internal.serializer.ObjectSerializer.serializeInternal(ObjectSerializer.java:69)
+		... 43 more
+]]></failure>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	http://localhost:8081/api/v2/projects
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "project_name": "Test Project"
+}
+2023-06-08 13:40:44,660 INFO  [de.ber.htw.con.ProjectController] (executor-thread-0) Creating a new project (name=Test Project)
+HTTP/1.1 201 Created
+Access-Control-Allow-Headers: *
+Access-Control-Allow-Methods: *
+Access-Control-Allow-Origin: *
+Location: http://localhost:8081/api/v2/projects/586b75e2-3193-4040-bd59-d5f7fd4e1f2e
+content-length: 0
+Request method:	POST
+Request URI:	http://localhost:8081/api/v2/users
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "user_email": "max.mustermann@example.org",
+    "user_name": "Max Mustermann"
+}
+2023-06-08 13:40:44,714 INFO  [de.ber.htw.con.UserController] (executor-thread-0) Creating a new user (name=Max Mustermann, email=max.mustermann@example.org)
+HTTP/1.1 201 Created
+Access-Control-Allow-Headers: *
+Access-Control-Allow-Methods: *
+Access-Control-Allow-Origin: *
+Location: http://localhost:8081/api/v2/users/7744ecd3-39f4-4ae3-99ca-0cab5e51fddc
+content-length: 0
+Request method:	PATCH
+Request URI:	http://localhost:8081/api/v2/projects/586b75e2-3193-4040-bd59-d5f7fd4e1f2e/users/7744ecd3-39f4-4ae3-99ca-0cab5e51fddc
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+2023-06-08 13:40:44,770 INFO  [de.ber.htw.con.ProjectController] (executor-thread-0) adding a user (7744ecd3-39f4-4ae3-99ca-0cab5e51fddc) to an existing project (586b75e2-3193-4040-bd59-d5f7fd4e1f2e)
+2023-06-08 13:40:44,784 INFO  [de.ber.htw.con.ProjectController] (executor-thread-0) updated project to: de.berlin.htw.entity.dto.ProjectEntity@9acf1fdf
+HTTP/1.1 200 OK
+Access-Control-Allow-Headers: *
+Access-Control-Allow-Methods: *
+Access-Control-Allow-Origin: *
+Content-Type: application/json
+content-length: 287
+
+{
+    "id": "586b75e2-3193-4040-bd59-d5f7fd4e1f2e",
+    "project_name": "Test Project",
+    "users": [
+        {
+            "createdAt": "2023-06-08T11:40:45Z[UTC]",
+            "modifiedAt": "2023-06-08T11:40:45Z[UTC]",
+            "email": "max.mustermann@example.org",
+            "id": "7744ecd3-39f4-4ae3-99ca-0cab5e51fddc",
+            "name": "Max Mustermann",
+            "projects": [
+                
+            ]
+        }
+    ]
+}
+Request method:	GET
+Request URI:	http://localhost:8081/api/v2/projects/586b75e2-3193-4040-bd59-d5f7fd4e1f2e
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+2023-06-08 13:40:44,833 INFO  [de.ber.htw.con.ProjectController] (executor-thread-0) Retrieving an existing project (id = 586b75e2-3193-4040-bd59-d5f7fd4e1f2e)
+2023-06-08 13:40:44,865 SEVERE [org.ecl.yas.int.Marshaller] (executor-thread-0) Unable to serialize property 'users' from de.berlin.htw.lib.dto.ProjectJson
+2023-06-08 13:40:44,875 SEVERE [org.ecl.yas.int.Marshaller] (executor-thread-0) Generating incomplete JSON
+2023-06-08 13:40:44,893 ERROR [io.qua.ver.htt.run.QuarkusErrorHandler] (executor-thread-0) HTTP Request to /api/v2/projects/586b75e2-3193-4040-bd59-d5f7fd4e1f2e failed, error id: 4a598340-ef60-4e94-835f-aed200fcaeab-1: org.jboss.resteasy.spi.UnhandledException: javax.ws.rs.ProcessingException: RESTEASY008205: JSON Binding serialization error javax.json.bind.JsonbException: Unable to serialize property 'users' from de.berlin.htw.lib.dto.ProjectJson
+	at org.jboss.resteasy.core.ExceptionHandler.handleException(ExceptionHandler.java:368)
+	at org.jboss.resteasy.core.SynchronousDispatcher.writeException(SynchronousDispatcher.java:218)
+	at org.jboss.resteasy.core.SynchronousDispatcher.writeResponse(SynchronousDispatcher.java:614)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:524)
+	at org.jboss.resteasy.core.SynchronousDispatcher.lambda$invoke$4(SynchronousDispatcher.java:261)
+	at org.jboss.resteasy.core.SynchronousDispatcher.lambda$preprocess$0(SynchronousDispatcher.java:161)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:364)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:82)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:147)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:93)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$14.runWith(VertxCoreRecorder.java:576)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: javax.ws.rs.ProcessingException: RESTEASY008205: JSON Binding serialization error javax.json.bind.JsonbException: Unable to serialize property 'users' from de.berlin.htw.lib.dto.ProjectJson
+	at org.jboss.resteasy.plugins.providers.jsonb.JsonBindingProvider.asyncWriteTo(JsonBindingProvider.java:158)
+	at org.jboss.resteasy.core.interception.jaxrs.ServerWriterInterceptorContext.writeTo(ServerWriterInterceptorContext.java:87)
+	at org.jboss.resteasy.core.interception.jaxrs.AbstractWriterInterceptorContext.asyncProceed(AbstractWriterInterceptorContext.java:203)
+	at org.jboss.resteasy.core.interception.jaxrs.AbstractWriterInterceptorContext.getStarted(AbstractWriterInterceptorContext.java:166)
+	at org.jboss.resteasy.core.interception.jaxrs.ServerWriterInterceptorContext.lambda$getStarted$0(ServerWriterInterceptorContext.java:73)
+	at org.jboss.resteasy.core.interception.jaxrs.ServerWriterInterceptorContext.aroundWriteTo(ServerWriterInterceptorContext.java:93)
+	at org.jboss.resteasy.core.interception.jaxrs.ServerWriterInterceptorContext.getStarted(ServerWriterInterceptorContext.java:73)
+	at org.jboss.resteasy.core.ServerResponseWriter.lambda$writeNomapResponse$3(ServerResponseWriter.java:163)
+	at org.jboss.resteasy.core.interception.jaxrs.ContainerResponseContextImpl.filter(ContainerResponseContextImpl.java:410)
+	at org.jboss.resteasy.core.ServerResponseWriter.executeFilters(ServerResponseWriter.java:252)
+	at org.jboss.resteasy.core.ServerResponseWriter.writeNomapResponse(ServerResponseWriter.java:101)
+	at org.jboss.resteasy.core.ServerResponseWriter.writeNomapResponse(ServerResponseWriter.java:74)
+	at org.jboss.resteasy.core.SynchronousDispatcher.writeResponse(SynchronousDispatcher.java:594)
+	... 16 more
+Caused by: javax.json.bind.JsonbException: Unable to serialize property 'users' from de.berlin.htw.lib.dto.ProjectJson
+	at org.eclipse.yasson.internal.serializer.ObjectSerializer.serializeInternal(ObjectSerializer.java:71)
+	at org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serialize(AbstractContainerSerializer.java:107)
+	at org.eclipse.yasson.internal.Marshaller.serializeRoot(Marshaller.java:147)
+	at org.eclipse.yasson.internal.Marshaller.marshall(Marshaller.java:73)
+	at org.eclipse.yasson.internal.Marshaller.marshall(Marshaller.java:101)
+	at org.eclipse.yasson.internal.JsonBinding.toJson(JsonBinding.java:126)
+	at org.jboss.resteasy.plugins.providers.jsonb.JsonBindingProvider.asyncWriteTo(JsonBindingProvider.java:154)
+	... 28 more
+Caused by: javax.json.bind.JsonbException: Unable to serialize property 'projects' from de.berlin.htw.entity.dto.UserEntity
+	at org.eclipse.yasson.internal.serializer.ObjectSerializer.serializeInternal(ObjectSerializer.java:71)
+	at org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serialize(AbstractContainerSerializer.java:107)
+	at org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serializerCaptor(AbstractContainerSerializer.java:125)
+	at org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serializeItem(AbstractContainerSerializer.java:194)
+	at org.eclipse.yasson.internal.serializer.CollectionSerializer.serializeInternal(CollectionSerializer.java:39)
+	at org.eclipse.yasson.internal.serializer.CollectionSerializer.serializeInternal(CollectionSerializer.java:25)
+	at org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serialize(AbstractContainerSerializer.java:107)
+	at org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serializerCaptor(AbstractContainerSerializer.java:125)
+	at org.eclipse.yasson.internal.serializer.ObjectSerializer.marshallProperty(ObjectSerializer.java:121)
+	at org.eclipse.yasson.internal.serializer.ObjectSerializer.serializeInternal(ObjectSerializer.java:69)
+	... 34 more
+Caused by: javax.json.bind.JsonbException: Recursive reference has been found in class class de.berlin.htw.entity.dto.ProjectEntity.
+	at org.eclipse.yasson.internal.serializer.ObjectSerializer.serializeInternal(ObjectSerializer.java:76)
+	at org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serialize(AbstractContainerSerializer.java:107)
+	at org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serializerCaptor(AbstractContainerSerializer.java:125)
+	at org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serializeItem(AbstractContainerSerializer.java:194)
+	at org.eclipse.yasson.internal.serializer.CollectionSerializer.serializeInternal(CollectionSerializer.java:39)
+	at org.eclipse.yasson.internal.serializer.CollectionSerializer.serializeInternal(CollectionSerializer.java:25)
+	at org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serialize(AbstractContainerSerializer.java:107)
+	at org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serializerCaptor(AbstractContainerSerializer.java:125)
+	at org.eclipse.yasson.internal.serializer.ObjectSerializer.marshallProperty(ObjectSerializer.java:121)
+	at org.eclipse.yasson.internal.serializer.ObjectSerializer.serializeInternal(ObjectSerializer.java:69)
+	... 43 more
+
+HTTP/1.1 500 Internal Server Error
+Access-Control-Allow-Headers: *
+Access-Control-Allow-Methods: *
+Access-Control-Allow-Origin: *
+content-type: application/json; charset=utf-8
+content-length: 7635
+
+{
+    "details": "Error id 4a598340-ef60-4e94-835f-aed200fcaeab-1, org.jboss.resteasy.spi.UnhandledException: javax.ws.rs.ProcessingException: RESTEASY008205: JSON Binding serialization error javax.json.bind.JsonbException: Unable to serialize property 'users' from de.berlin.htw.lib.dto.ProjectJson",
+    "stack": "org.jboss.resteasy.spi.UnhandledException: javax.ws.rs.ProcessingException: RESTEASY008205: JSON Binding serialization error javax.json.bind.JsonbException: Unable to serialize property 'users' from de.berlin.htw.lib.dto.ProjectJson\r\n\tat org.jboss.resteasy.core.ExceptionHandler.handleException(ExceptionHandler.java:368)\r\n\tat org.jboss.resteasy.core.SynchronousDispatcher.writeException(SynchronousDispatcher.java:218)\r\n\tat org.jboss.resteasy.core.SynchronousDispatcher.writeResponse(SynchronousDispatcher.java:614)\r\n\tat org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:524)\r\n\tat org.jboss.resteasy.core.SynchronousDispatcher.lambda$invoke$4(SynchronousDispatcher.java:261)\r\n\tat org.jboss.resteasy.core.SynchronousDispatcher.lambda$preprocess$0(SynchronousDispatcher.java:161)\r\n\tat org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:364)\r\n\tat org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)\r\n\tat org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)\r\n\tat io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:82)\r\n\tat io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:147)\r\n\tat io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:93)\r\n\tat io.quarkus.vertx.core.runtime.VertxCoreRecorder$14.runWith(VertxCoreRecorder.java:576)\r\n\tat org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)\r\n\tat org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)\r\n\tat org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)\r\n\tat org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)\r\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\r\n\tat java.base/java.lang.Thread.run(Thread.java:1623)\r\nCaused by: javax.ws.rs.ProcessingException: RESTEASY008205: JSON Binding serialization error javax.json.bind.JsonbException: Unable to serialize property 'users' from de.berlin.htw.lib.dto.ProjectJson\r\n\tat org.jboss.resteasy.plugins.providers.jsonb.JsonBindingProvider.asyncWriteTo(JsonBindingProvider.java:158)\r\n\tat org.jboss.resteasy.core.interception.jaxrs.ServerWriterInterceptorContext.writeTo(ServerWriterInterceptorContext.java:87)\r\n\tat org.jboss.resteasy.core.interception.jaxrs.AbstractWriterInterceptorContext.asyncProceed(AbstractWriterInterceptorContext.java:203)\r\n\tat org.jboss.resteasy.core.interception.jaxrs.AbstractWriterInterceptorContext.getStarted(AbstractWriterInterceptorContext.java:166)\r\n\tat org.jboss.resteasy.core.interception.jaxrs.ServerWriterInterceptorContext.lambda$getStarted$0(ServerWriterInterceptorContext.java:73)\r\n\tat org.jboss.resteasy.core.interception.jaxrs.ServerWriterInterceptorContext.aroundWriteTo(ServerWriterInterceptorContext.java:93)\r\n\tat org.jboss.resteasy.core.interception.jaxrs.ServerWriterInterceptorContext.getStarted(ServerWriterInterceptorContext.java:73)\r\n\tat org.jboss.resteasy.core.ServerResponseWriter.lambda$writeNomapResponse$3(ServerResponseWriter.java:163)\r\n\tat org.jboss.resteasy.core.interception.jaxrs.ContainerResponseContextImpl.filter(ContainerResponseContextImpl.java:410)\r\n\tat org.jboss.resteasy.core.ServerResponseWriter.executeFilters(ServerResponseWriter.java:252)\r\n\tat org.jboss.resteasy.core.ServerResponseWriter.writeNomapResponse(ServerResponseWriter.java:101)\r\n\tat org.jboss.resteasy.core.ServerResponseWriter.writeNomapResponse(ServerResponseWriter.java:74)\r\n\tat org.jboss.resteasy.core.SynchronousDispatcher.writeResponse(SynchronousDispatcher.java:594)\r\n\t... 16 more\r\nCaused by: javax.json.bind.JsonbException: Unable to serialize property 'users' from de.berlin.htw.lib.dto.ProjectJson\r\n\tat org.eclipse.yasson.internal.serializer.ObjectSerializer.serializeInternal(ObjectSerializer.java:71)\r\n\tat org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serialize(AbstractContainerSerializer.java:107)\r\n\tat org.eclipse.yasson.internal.Marshaller.serializeRoot(Marshaller.java:147)\r\n\tat org.eclipse.yasson.internal.Marshaller.marshall(Marshaller.java:73)\r\n\tat org.eclipse.yasson.internal.Marshaller.marshall(Marshaller.java:101)\r\n\tat org.eclipse.yasson.internal.JsonBinding.toJson(JsonBinding.java:126)\r\n\tat org.jboss.resteasy.plugins.providers.jsonb.JsonBindingProvider.asyncWriteTo(JsonBindingProvider.java:154)\r\n\t... 28 more\r\nCaused by: javax.json.bind.JsonbException: Unable to serialize property 'projects' from de.berlin.htw.entity.dto.UserEntity\r\n\tat org.eclipse.yasson.internal.serializer.ObjectSerializer.serializeInternal(ObjectSerializer.java:71)\r\n\tat org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serialize(AbstractContainerSerializer.java:107)\r\n\tat org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serializerCaptor(AbstractContainerSerializer.java:125)\r\n\tat org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serializeItem(AbstractContainerSerializer.java:194)\r\n\tat org.eclipse.yasson.internal.serializer.CollectionSerializer.serializeInternal(CollectionSerializer.java:39)\r\n\tat org.eclipse.yasson.internal.serializer.CollectionSerializer.serializeInternal(CollectionSerializer.java:25)\r\n\tat org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serialize(AbstractContainerSerializer.java:107)\r\n\tat org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serializerCaptor(AbstractContainerSerializer.java:125)\r\n\tat org.eclipse.yasson.internal.serializer.ObjectSerializer.marshallProperty(ObjectSerializer.java:121)\r\n\tat org.eclipse.yasson.internal.serializer.ObjectSerializer.serializeInternal(ObjectSerializer.java:69)\r\n\t... 34 more\r\nCaused by: javax.json.bind.JsonbException: Recursive reference has been found in class class de.berlin.htw.entity.dto.ProjectEntity.\r\n\tat org.eclipse.yasson.internal.serializer.ObjectSerializer.serializeInternal(ObjectSerializer.java:76)\r\n\tat org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serialize(AbstractContainerSerializer.java:107)\r\n\tat org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serializerCaptor(AbstractContainerSerializer.java:125)\r\n\tat org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serializeItem(AbstractContainerSerializer.java:194)\r\n\tat org.eclipse.yasson.internal.serializer.CollectionSerializer.serializeInternal(CollectionSerializer.java:39)\r\n\tat org.eclipse.yasson.internal.serializer.CollectionSerializer.serializeInternal(CollectionSerializer.java:25)\r\n\tat org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serialize(AbstractContainerSerializer.java:107)\r\n\tat org.eclipse.yasson.internal.serializer.AbstractContainerSerializer.serializerCaptor(AbstractContainerSerializer.java:125)\r\n\tat org.eclipse.yasson.internal.serializer.ObjectSerializer.marshallProperty(ObjectSerializer.java:121)\r\n\tat org.eclipse.yasson.internal.serializer.ObjectSerializer.serializeInternal(ObjectSerializer.java:69)\r\n\t... 43 more"
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testCreateAndGet" classname="de.berlin.htw.boundary.ProjectResourceTest" time="0.179">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	http://localhost:8081/api/v2/projects
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "project_name": "Test Project"
+}
+2023-06-08 13:40:45,091 INFO  [de.ber.htw.con.ProjectController] (executor-thread-0) Creating a new project (name=Test Project)
+HTTP/1.1 201 Created
+Access-Control-Allow-Headers: *
+Access-Control-Allow-Methods: *
+Access-Control-Allow-Origin: *
+Location: http://localhost:8081/api/v2/projects/9929c06a-3427-4eff-b9ce-97ca89dbc5f6
+content-length: 0
+Request method:	GET
+Request URI:	http://localhost:8081/api/v2/projects/9929c06a-3427-4eff-b9ce-97ca89dbc5f6
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+2023-06-08 13:40:45,146 INFO  [de.ber.htw.con.ProjectController] (executor-thread-0) Retrieving an existing project (id = 9929c06a-3427-4eff-b9ce-97ca89dbc5f6)
+HTTP/1.1 200 OK
+Access-Control-Allow-Headers: *
+Access-Control-Allow-Methods: *
+Access-Control-Allow-Origin: *
+Content-Type: application/json
+content-length: 86
+
+{
+    "id": "9929c06a-3427-4eff-b9ce-97ca89dbc5f6",
+    "project_name": "Test Project",
+    "users": [
+        
+    ]
+}
+]]></system-out>
+  </testcase>
+</testsuite>

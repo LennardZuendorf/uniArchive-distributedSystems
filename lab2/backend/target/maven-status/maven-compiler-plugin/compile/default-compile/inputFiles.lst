@@ -1,0 +1,11 @@
+C:\Users\lenna\Programming\verteilte-anwendungen-lab2\backend\src\main\java\de\berlin\htw\boundary\UserResource.java
+C:\Users\lenna\Programming\verteilte-anwendungen-lab2\backend\src\main\java\de\berlin\htw\control\producer\LoggerProducer.java
+C:\Users\lenna\Programming\verteilte-anwendungen-lab2\backend\src\main\java\de\berlin\htw\boundary\ProjectResource.java
+C:\Users\lenna\Programming\verteilte-anwendungen-lab2\backend\src\main\java\de\berlin\htw\entity\dto\ProjectEntity.java
+C:\Users\lenna\Programming\verteilte-anwendungen-lab2\backend\src\main\java\de\berlin\htw\control\ProjectController.java
+C:\Users\lenna\Programming\verteilte-anwendungen-lab2\backend\src\main\java\de\berlin\htw\boundary\AlreadyExistsException.java
+C:\Users\lenna\Programming\verteilte-anwendungen-lab2\backend\src\main\java\de\berlin\htw\entity\dao\ProjectRepository.java
+C:\Users\lenna\Programming\verteilte-anwendungen-lab2\backend\src\main\java\de\berlin\htw\control\UserController.java
+C:\Users\lenna\Programming\verteilte-anwendungen-lab2\backend\src\main\java\de\berlin\htw\entity\dao\UserRepository.java
+C:\Users\lenna\Programming\verteilte-anwendungen-lab2\backend\src\main\java\de\berlin\htw\entity\dto\UserEntity.java
+C:\Users\lenna\Programming\verteilte-anwendungen-lab2\backend\src\main\java\de\berlin\htw\entity\dto\AbstractEntity.java
