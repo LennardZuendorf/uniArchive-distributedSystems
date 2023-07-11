@@ -1,0 +1,5 @@
+de\berlin\htw\boundary\BasketResourceTest.class
+de\berlin\htw\entity\dao\UserRepositoryTest.class
+de\berlin\htw\boundary\OrderResourceTest.class
+de\berlin\htw\AbstractTest.class
+de\berlin\htw\entity\dao\OrderRepositoryTest.class

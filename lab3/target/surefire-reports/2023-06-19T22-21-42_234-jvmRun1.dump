@@ -1,0 +1,1225 @@
+# Created at 2023-06-19T22:21:59.080
+Exiting self fork JVM. Received SHUTDOWN command from Maven shutdown hook.
+Thread dump before exiting the process (31004@HPSpectre):
+"main" 
+   java.lang.Thread.State: WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:221)
+        at io.quarkus.builder.Execution.run(Execution.java:102)
+        at io.quarkus.builder.BuildExecutionBuilder.execute(BuildExecutionBuilder.java:79)
+        at io.quarkus.deployment.QuarkusAugmentor.run(QuarkusAugmentor.java:160)
+        at io.quarkus.runner.bootstrap.AugmentActionImpl.runAugment(AugmentActionImpl.java:331)
+        at io.quarkus.runner.bootstrap.AugmentActionImpl.createInitialRuntimeApplication(AugmentActionImpl.java:252)
+        at io.quarkus.runner.bootstrap.AugmentActionImpl.createInitialRuntimeApplication(AugmentActionImpl.java:60)
+        at app//io.quarkus.test.junit.QuarkusTestExtension.doJavaStart(QuarkusTestExtension.java:222)
+        at app//io.quarkus.test.junit.QuarkusTestExtension.ensureStarted(QuarkusTestExtension.java:592)
+        at app//io.quarkus.test.junit.QuarkusTestExtension.beforeAll(QuarkusTestExtension.java:640)
+        at app//org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeBeforeAllCallbacks$12(ClassBasedTestDescriptor.java:395)
+        at app//org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor$$Lambda$395/0x0000000801110590.execute(Unknown Source)
+        at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at app//org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeBeforeAllCallbacks(ClassBasedTestDescriptor.java:395)
+        at app//org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.before(ClassBasedTestDescriptor.java:211)
+        at app//org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.before(ClassBasedTestDescriptor.java:84)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:148)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$334/0x00000008010bb238.execute(Unknown Source)
+        at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$333/0x00000008010bae30.invoke(Unknown Source)
+        at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$332/0x00000008010ba458.execute(Unknown Source)
+        at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+        at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService$$Lambda$338/0x00000008010bc758.accept(Unknown Source)
+        at java.base@20.0.1/java.util.ArrayList.forEach(ArrayList.java:1511)
+        at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$334/0x00000008010bb238.execute(Unknown Source)
+        at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$333/0x00000008010bae30.invoke(Unknown Source)
+        at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda$332/0x00000008010ba458.execute(Unknown Source)
+        at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+        at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+        at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+        at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+        at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+        at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+        at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+        at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+        at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator$$Lambda$286/0x00000008010a6e98.accept(Unknown Source)
+        at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+        at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+        at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+        at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+        at app//org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+        at app//org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:50)
+        at app//org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+        at app//org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+        at app//org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+
+"Reference Handler" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+        at java.base@20.0.1/java.lang.ref.Reference.processPendingReferences(Reference.java:246)
+        at java.base@20.0.1/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:208)
+
+"Finalizer" 
+   java.lang.Thread.State: WAITING
+        at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+        at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+        at java.base@20.0.1/java.lang.Object.wait(Object.java:339)
+        at java.base@20.0.1/java.lang.ref.NativeReferenceQueue.await(NativeReferenceQueue.java:48)
+        at java.base@20.0.1/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:158)
+        at java.base@20.0.1/java.lang.ref.NativeReferenceQueue.remove(NativeReferenceQueue.java:89)
+        at java.base@20.0.1/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:173)
+
+"Signal Dispatcher" 
+   java.lang.Thread.State: RUNNABLE
+
+"Attach Listener" 
+   java.lang.Thread.State: RUNNABLE
+
+"Notification Thread" 
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+        at java.base@20.0.1/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+        at java.base@20.0.1/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+        at java.base@20.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+        at java.base@20.0.1/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at java.base@20.0.1/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:186)
+
+"surefire-forkedjvm-stream-flusher" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+        at java.base@20.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@20.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"surefire-forkedjvm-command-thread" 
+   java.lang.Thread.State: RUNNABLE
+        at java.management@20.0.1/sun.management.ThreadImpl.getThreadInfo1(Native Method)
+        at java.management@20.0.1/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:191)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.generateThreadDump(ForkedBooter.java:579)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.access$600(ForkedBooter.java:79)
+        at app//org.apache.maven.surefire.booter.ForkedBooter$4.update(ForkedBooter.java:315)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.callListeners(CommandReader.java:357)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.exitByConfiguration(CommandReader.java:367)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:330)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"ForkJoinPool.commonPool-worker-1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkUntil(LockSupport.java:449)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1891)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@20.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"Quarkus hang detection timer thread" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+        at java.base@20.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@20.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"build-1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-2" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-3" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-4" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-5" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-6" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-7" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-8" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-9" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-10" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-11" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-12" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-13" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-14" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-15" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@20.0.1/java.util.zip.ZipFile$Source.getEntryPos(ZipFile.java:1668)
+        at java.base@20.0.1/java.util.zip.ZipFile.getEntry(ZipFile.java:331)
+        at java.base@20.0.1/java.util.jar.JarFile.getEntry(JarFile.java:511)
+        at java.base@20.0.1/java.util.jar.JarFile.getJarEntry(JarFile.java:466)
+        at java.base@20.0.1/jdk.internal.loader.URLClassPath$JarLoader.getResource(URLClassPath.java:967)
+        at java.base@20.0.1/jdk.internal.loader.URLClassPath.getResource(URLClassPath.java:322)
+        at java.base@20.0.1/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:757)
+        at java.base@20.0.1/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681)
+        at java.base@20.0.1/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)
+        at java.base@20.0.1/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+        at java.base@20.0.1/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+        at app//net.bytebuddy.dynamic.DynamicType$Builder$AbstractBase.defineMethod(DynamicType.java:3524)
+        at app//net.bytebuddy.dynamic.DynamicType$Builder$AbstractBase.defineMethod(DynamicType.java:3517)
+        at org.hibernate.bytecode.enhance.internal.bytebuddy.EnhancerImpl.doEnhance(EnhancerImpl.java:164)
+        at org.hibernate.bytecode.enhance.internal.bytebuddy.EnhancerImpl.lambda$enhance$0(EnhancerImpl.java:134)
+        at org.hibernate.bytecode.enhance.internal.bytebuddy.EnhancerImpl$$Lambda$1494/0x0000000801627a68.apply(Unknown Source)
+        at org.hibernate.bytecode.internal.bytebuddy.ByteBuddyState.rewrite(ByteBuddyState.java:145)
+        at org.hibernate.bytecode.enhance.internal.bytebuddy.EnhancerImpl.enhance(EnhancerImpl.java:134)
+        at io.quarkus.hibernate.orm.deployment.HibernateEntityEnhancer$HibernateEnhancingClassVisitor.hibernateEnhancement(HibernateEntityEnhancer.java:86)
+        at io.quarkus.hibernate.orm.deployment.HibernateEntityEnhancer$HibernateEnhancingClassVisitor.visitEnd(HibernateEntityEnhancer.java:79)
+        at org.objectweb.asm.ClassReader.accept(ClassReader.java:748)
+        at org.objectweb.asm.ClassReader.accept(ClassReader.java:424)
+        at io.quarkus.deployment.steps.ClassTransformingBuildStep.transformClass(ClassTransformingBuildStep.java:361)
+        at io.quarkus.deployment.steps.ClassTransformingBuildStep$2.call(ClassTransformingBuildStep.java:232)
+        at io.quarkus.deployment.steps.ClassTransformingBuildStep$2.call(ClassTransformingBuildStep.java:219)
+        at java.base@20.0.1/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+        at org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18)
+        at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-16" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-17" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-18" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-19" 
+   java.lang.Thread.State: WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:221)
+        at java.base@20.0.1/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:500)
+        at java.base@20.0.1/java.util.concurrent.FutureTask.get(FutureTask.java:190)
+        at io.quarkus.deployment.steps.ClassTransformingBuildStep.handleClassTransformation(ClassTransformingBuildStep.java:267)
+        at java.base@20.0.1/java.lang.invoke.LambdaForm$DMH/0x0000000801494400.invokeVirtual(LambdaForm$DMH)
+        at java.base@20.0.1/java.lang.invoke.LambdaForm$MH/0x00000008015d2400.invoke(LambdaForm$MH)
+        at java.base@20.0.1/java.lang.invoke.LambdaForm$MH/0x0000000801188000.invoke(LambdaForm$MH)
+        at java.base@20.0.1/java.lang.invoke.Invokers$Holder.invokeExact_MT(Invokers$Holder)
+        at java.base@20.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invokeImpl(DirectMethodHandleAccessor.java:158)
+        at java.base@20.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+        at java.base@20.0.1/java.lang.reflect.Method.invoke(Method.java:578)
+        at io.quarkus.deployment.ExtensionLoader$3.execute(ExtensionLoader.java:909)
+        at io.quarkus.builder.BuildContext.run(BuildContext.java:281)
+        at io.quarkus.builder.BuildContext$$Lambda$611/0x0000000801287ab0.run(Unknown Source)
+        at org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18)
+        at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-20" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-21" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-22" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-23" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-24" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-25" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-26" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-27" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-28" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-29" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-30" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-31" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-32" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-33" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-34" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-35" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-36" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-37" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-38" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-39" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-40" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-41" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-42" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-43" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-44" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-45" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-46" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-47" 
+   java.lang.Thread.State: RUNNABLE
+        at org.hibernate.bytecode.enhance.internal.bytebuddy.PersistentAttributeTransformer.<clinit>(PersistentAttributeTransformer.java:53)
+        at org.hibernate.bytecode.enhance.internal.bytebuddy.EnhancerImpl.createTransformer(EnhancerImpl.java:363)
+        at org.hibernate.bytecode.enhance.internal.bytebuddy.EnhancerImpl.doEnhance(EnhancerImpl.java:350)
+        at org.hibernate.bytecode.enhance.internal.bytebuddy.EnhancerImpl.lambda$enhance$0(EnhancerImpl.java:134)
+        at org.hibernate.bytecode.enhance.internal.bytebuddy.EnhancerImpl$$Lambda$1494/0x0000000801627a68.apply(Unknown Source)
+        at org.hibernate.bytecode.internal.bytebuddy.ByteBuddyState.rewrite(ByteBuddyState.java:145)
+        at org.hibernate.bytecode.enhance.internal.bytebuddy.EnhancerImpl.enhance(EnhancerImpl.java:134)
+        at io.quarkus.hibernate.orm.deployment.HibernateEntityEnhancer$HibernateEnhancingClassVisitor.hibernateEnhancement(HibernateEntityEnhancer.java:86)
+        at io.quarkus.hibernate.orm.deployment.HibernateEntityEnhancer$HibernateEnhancingClassVisitor.visitEnd(HibernateEntityEnhancer.java:79)
+        at org.objectweb.asm.ClassReader.accept(ClassReader.java:748)
+        at org.objectweb.asm.ClassReader.accept(ClassReader.java:424)
+        at io.quarkus.deployment.steps.ClassTransformingBuildStep.transformClass(ClassTransformingBuildStep.java:361)
+        at io.quarkus.deployment.steps.ClassTransformingBuildStep$2.call(ClassTransformingBuildStep.java:232)
+        at io.quarkus.deployment.steps.ClassTransformingBuildStep$2.call(ClassTransformingBuildStep.java:219)
+        at java.base@20.0.1/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+        at org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18)
+        at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-48" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-49" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-50" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-51" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-52" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"mysql-cj-abandoned-connection-cleanup" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+        at java.base@20.0.1/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+        at java.base@20.0.1/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+        at java.base@20.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+        at app//com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+        at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"build-53" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-54" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-55" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-56" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-57" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-58" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-59" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-60" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-61" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-62" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-63" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-64" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-65" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-66" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-67" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-68" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-69" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-70" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-71" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-72" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-73" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-74" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-75" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-76" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-77" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-78" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-79" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-80" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-81" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-82" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-83" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-84" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-85" 
+   java.lang.Thread.State: RUNNABLE
+        at org.hibernate.bytecode.enhance.internal.bytebuddy.EnhancerImpl.doEnhance(EnhancerImpl.java:163)
+        at org.hibernate.bytecode.enhance.internal.bytebuddy.EnhancerImpl.lambda$enhance$0(EnhancerImpl.java:134)
+        at org.hibernate.bytecode.enhance.internal.bytebuddy.EnhancerImpl$$Lambda$1494/0x0000000801627a68.apply(Unknown Source)
+        at org.hibernate.bytecode.internal.bytebuddy.ByteBuddyState.rewrite(ByteBuddyState.java:145)
+        at org.hibernate.bytecode.enhance.internal.bytebuddy.EnhancerImpl.enhance(EnhancerImpl.java:134)
+        at io.quarkus.hibernate.orm.deployment.HibernateEntityEnhancer$HibernateEnhancingClassVisitor.hibernateEnhancement(HibernateEntityEnhancer.java:86)
+        at io.quarkus.hibernate.orm.deployment.HibernateEntityEnhancer$HibernateEnhancingClassVisitor.visitEnd(HibernateEntityEnhancer.java:79)
+        at org.objectweb.asm.ClassReader.accept(ClassReader.java:748)
+        at org.objectweb.asm.ClassReader.accept(ClassReader.java:424)
+        at io.quarkus.deployment.steps.ClassTransformingBuildStep.transformClass(ClassTransformingBuildStep.java:361)
+        at io.quarkus.deployment.steps.ClassTransformingBuildStep$2.call(ClassTransformingBuildStep.java:232)
+        at io.quarkus.deployment.steps.ClassTransformingBuildStep$2.call(ClassTransformingBuildStep.java:219)
+        at java.base@20.0.1/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+        at org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18)
+        at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-86" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-87" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-88" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-89" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-90" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-91" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-92" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-93" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-94" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-95" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-96" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-97" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-98" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+"build-99" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2256)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1522)
+        at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+        at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+        at org.jboss.threads.JBossThread.run(JBossThread.java:501)
+
+
+
