@@ -1,17 +1,19 @@
-<h1>uniArchive-distributedSystems</h1>
+# uniArchive: distributedSystems
 
-<h4>This is one of several university course project archives, this one in particular contains 4 labs in which we covered important technologies in the development of distributed systems (db, REST, caching, events, etc.). Each folder contains and entire project.</h4>
+#### This is one of several university course project archives, this one, in particular, contains 4 labs in which we covered important parts in the development of distributed systems and micro services (DB, REST, caching, events, etc.). Each folder contains an entire project.</h4>
 
-<h2>🏗️ Tech Stack:</h2>
+> ℹ️
+> This is an archive of tasks done as part of my studies.
 
-**Languages:** Java
+## 🏗️ Tech Stack:</h2>
 
-**Frameworks, Build Tool:** Quarkus, JavaEE & Maven
+**Languages and Frameworks:** Java, Javascript, Quarkus, JavaEE, Vue
+
+**Build Tool:** Maven
 
 **other Tech:** Docker, MySQL, Liquibase, Redis, Kafka
 
-
-<h2>👨‍💻 Author and Credits:</h2>
+## 👨‍💻 Author and Credits:</h2>
 
 **Author:** [@LennardZuendorf](https://github.com/LennardZuendorf)
 
